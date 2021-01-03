@@ -4,8 +4,8 @@
 #### How to get started
 - Create a fork of this repository.
 - Use ```git clone``` to clone the fork to your local storage.
-- Open ```src``` folder and use publisher or any equivelent software to edit.
-- Once changes have been made add a brief changelog in the amendment history located at the top of the documents with credits to yourself and others involved.
+- Open ```src``` folder and use publisher or any equivalent software to edit.
+- Once changes have been made, add a brief changelog in the amendment history located at the top of the documents with credits to yourself and others involved.
 - Save the publisher file and generate a PDF. 
 - Commit your changes and create a Pull request with description of what was changed.
 
