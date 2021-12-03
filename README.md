@@ -2,7 +2,7 @@
 
 
 #
-# Flybywire Simulations Documentation
+# Flybywire Simulations Manuals
 
 #### Contribution Guide
 See [Contributing.md](https://github.com/NathanInnes/fbw-docs/blob/master/Contributing.md)
