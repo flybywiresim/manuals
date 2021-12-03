@@ -1,4 +1,5 @@
-![Flybywire](https://raw.githubusercontent.com/flybywiresim/fbw-branding/master/png/FBW-Logo.png)
+![Group 8 (2)](https://user-images.githubusercontent.com/70079939/144655548-0387152c-ab84-4f4f-b6eb-c727eaae5494.png)
+
 # Contribution Guide
 #
 #### How to get started
