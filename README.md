@@ -1,4 +1,5 @@
-![fbw-tail-20_1](https://user-images.githubusercontent.com/70079939/144621151-8af5b79f-a034-471b-bdc5-06e8d39caaef.png)
+![Group 8 (1)](https://user-images.githubusercontent.com/70079939/144621297-2753c2a6-39c2-40ef-a3ec-d597eccfa7ca.png)
+
 
 #
 # Flybywire Simulations Documentation
