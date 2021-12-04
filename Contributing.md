@@ -12,8 +12,6 @@
 
 #### Rules for Creating/Amending Documents
 ##### General Rules
-- Size **20** Font for titles.
-- Size **10** for regular text.
 - Use our official branding only. Found [here](https://github.com/flybywiresim/fbw-branding).
 - Use easy to see and pleasing colours to substitute in areas where official branding doesn't match. Good website for colors can be found [here](https://flatuicolors.com/).
 - Use good punctuation and grammar where possible.
