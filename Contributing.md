@@ -1,4 +1,4 @@
-![Group 125 (1)](https://user-images.githubusercontent.com/70079939/144690171-2121c160-c62d-4607-989d-059cf5df9b26.png)
+
 
 # Contribution Guide
 #
