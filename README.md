@@ -4,5 +4,7 @@
 #
 # Flybywire Simulations Manuals
 
+This section contains different manuals, like SOP, Checklists, Routes, and more!
+
 #### Contribution Guide
 See [Contributing.md](https://github.com/NathanInnes/fbw-docs/blob/master/Contributing.md)
