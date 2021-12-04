@@ -1,4 +1,4 @@
-![Group 8 (2)](https://user-images.githubusercontent.com/70079939/144655548-0387152c-ab84-4f4f-b6eb-c727eaae5494.png)
+
 
 # Contribution Guide
 #
@@ -12,14 +12,10 @@
 
 #### Rules for Creating/Amending Documents
 ##### General Rules
-- Size **20** Font for titles.
-- Size **10** for regular text.
 - Use our official branding only. Found [here](https://github.com/flybywiresim/fbw-branding).
-- Use our document footer if applicable.
 - Use easy to see and pleasing colours to substitute in areas where official branding doesn't match. Good website for colors can be found [here](https://flatuicolors.com/).
 - Use good punctuation and grammar where possible.
 - Check for spelling errors.
-##### Non-formal rules
-- Use **```Calibri```** font for non-formal text.
-##### Formal rules
-- Use **```Cambria```** font for formal text.
+
+##### Fonts
+- It is recommended to base the fonts on researches for aviation. [Here](https://ti.arc.nasa.gov/m/profile/adegani/Flight-Deck_Documentation.pdf) is a study from Nasa on the subject. 
