@@ -20,4 +20,4 @@
 - Check for spelling errors.
 
 ##### Fonts
-- It is recommended to base the fonts on researches for aviation. Here is a study from Nasa on the subject: tps://ti.arc.nasa.gov/m/profile/adegani/Flight-Deck_Documentation.pdf
+- It is recommended to base the fonts on researches for aviation. [Here](https://ti.arc.nasa.gov/m/profile/adegani/Flight-Deck_Documentation.pdf) is a study from Nasa on the subject. 
