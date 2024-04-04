@@ -1,7 +1,7 @@
-![Group 8 (1)](https://user-images.githubusercontent.com/70079939/144621297-2753c2a6-39c2-40ef-a3ec-d597eccfa7ca.png)
+![FlyByWire Simulations](https://raw.githubusercontent.com/flybywiresim/branding/master/tails-with-text/FBW-Color-Dark.svg#gh-light-mode-only)
+![FlyByWire Simulations](https://raw.githubusercontent.com/flybywiresim/branding/master/tails-with-text/FBW-Color-Light.svg#gh-dark-mode-only)
 
 
-#
 # Flybywire Simulations Manuals
 
 This section contains different manuals, like SOP, Checklists, Routes, and more!
