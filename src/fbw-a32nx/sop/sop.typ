@@ -1,1 +1,2 @@
-#include("./index.typ")
+#import "./index.typ": *
+#sop()
