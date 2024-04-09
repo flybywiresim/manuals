@@ -1,29 +1,40 @@
-#set text(
-  font: "Arial",
-  size: 11pt
+#let document = [Flight Crew\ Operating Manual]
+#let aircraft = "A32NX"
+#let h1 = "Procedures"
+#let h2 = "Normal Procedures"
+#let h3 = "Standard Operating Procedures"
+
+#let sop() = {
+
+set text(
+  font: "Familjen Grotesk",
+  size: 9pt,
 )
-#set page(
+set page(
   paper: "a5",
-  margin: (x: 1.8cm, y: 1.5cm),
+  margin: (x: 1.8cm, y: 0.8cm),
 )
-#set par(
+set par(
   justify: true,
   leading: 0.52em,
 )
 
-#set page("us-letter")
-#set page(foreground: image("./images/cover_sop.png"))
-Standard Operating Procedures
+set page("us-letter")
+set page(foreground: image("./images/cover_sop.png"))
+text[Standard Operating Procedures
 
 For simulation purposes
+]
  
-#pagebreak()
+pagebreak()
 
-#set page(paper: "a5")
-#set page(foreground: none)
+set page(paper: "a5")
+set page(foreground: none)
 
-hello world
+text[hello world]
 
-#include("./exterior-inspection/index.typ")
+include("./exterior-inspection/index.typ")
 
-#include("./preliminary-cockpit-preparation/index.typ")
+import "./preliminary-cockpit-preparation/index.typ": *
+sop--preliminary-cockpit-preparation(document, aircraft, h1, h2, h3, "- Preliminary Cockpit Preparation")
+}

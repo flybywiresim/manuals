@@ -1,5 +1,0 @@
-#let document = "Flight Crew Operating Manual"
-#let aircraft = "A32NX"
-#let h1 = "Procedures"
-#let h2 = "Normal Procedures"
-#let h3 = "Standard Operating Procedures"
