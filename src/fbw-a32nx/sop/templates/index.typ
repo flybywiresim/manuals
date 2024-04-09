@@ -1,5 +1,6 @@
-#import "./../templates/headerbox.typ": *
+#import "./../templates/pageheader.typ": *
+#import "./../templates/sectionheadingbox.typ": *
 #import "./../templates/warningbox.typ": *
 #import "./../templates/indent.typ": *
-#import "./../templates/h3.typ": *
+#import "./../templates/smallheading.typ": *
 #import "./../templates/item.typ": *
