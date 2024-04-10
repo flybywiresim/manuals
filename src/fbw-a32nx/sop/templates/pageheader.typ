@@ -1,11 +1,11 @@
-#let pageheader(document,aircraft,h1,h2,h3,h4) = {
+#let pageheader(aircraft, document,h1,h2,h3, h4) = {
   table(
     columns: (100pt, 1fr),
     inset: 3pt,
     align: center,
     stroke: black,
     [#grid(
-      rows: (18pt, auto),
+      rows: (22pt, auto),
       gutter: 3pt,
       align: center,
       [#pad(
@@ -26,8 +26,16 @@
         text(black, size: 9pt, weight: "bold", hyphenate: false, upper(h2)),
         bottom: 2pt,
       )],
-      [#text(black, size: 8pt, hyphenate: false, upper(h3))],
-      [#text(black, size: 8pt, hyphenate: false, upper(h4))],
+      [#box(
+        height: 16pt,
+        align(center + horizon)[
+          #if (h3.len() + " - ".len() +  h4.len()) > 60 [
+            #text(black, size: 8pt, hyphenate: false, upper([#h3 \ - #h4]))
+          ] else [
+            #text(black, size: 8pt, hyphenate: false, upper(h3 + " - " + h4))
+          ]
+        ]
+      )],
     )],
   )
 }

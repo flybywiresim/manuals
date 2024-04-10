@@ -1,6 +1,9 @@
 #import "./../templates/index.typ": *
 
-#let sop--preliminary-cockpit-preparation(document, aircraft, h1,h2,h3,h4) = {
+#let dateLastModified = datetime.today()
+#let thisSection = "Preliminary Cockpit Preparation"
+
+#let sop--preliminary-cockpit-preparation(operatorAbbreviated, aircraft, document, documentAbbreviated, h1, h1Abbreviated, h2, h2Abbreviated, h3, h3Abbreviated, h4) = {
 
 
 set page("us-letter")
@@ -13,9 +16,9 @@ pagebreak()
 set page(
   paper: "a5",
   foreground:none,
+  header: pageheader(aircraft, document, h1, h2, h3, thisSection),
+  footer: pagefooter(operatorAbbreviated, aircraft, documentAbbreviated, h1Abbreviated, h2Abbreviated, h3Abbreviated, dateLastModified)
 )
-
-pageheader(document, aircraft, h1, h2, h3, "- Preliminary Cockpit Preparation",)
 
 sectionheadingbox[General]
 indent[Items marked by asterisks \(\*\) are the only steps to be completed after a transit stop without flight crew change. Otherwise, the new flight crew performs all the items. \ 
@@ -34,22 +37,41 @@ indent([
   #smallheading[Eng]
 
   #indent([
-    #item("Eng 1,2 master levers", "off", "CM2", false)
+    #item("Eng 1,2 master levers", "OFF", "CM2", false)
 
-    #item("ENG MODE selector", "Norm", "CM2", true)
+    #item("ENG MODE selector", "NORM", "CM2", true)
   ])
 
   #smallheading[Weather Radar]
   #indent([
-    #item("* XWR/PWS sw", "off", "CM2", false)
+    #item("* XWR/PWS sw", "OFF", "CM2", false)
 
-    #item("* CAPT DISPLAY mode selector", "off", "CM2", false)
+    #item("* CAPT DISPLAY mode selector", "OFF", "CM2", false)
 
-    #item("* F/O DISPLAY mode selector", "off", "CM2", false)
+    #item("* F/O DISPLAY mode selector", "OFF", "CM2", false)
 
     #item("* GAIN knob", "AUTO", "CM2", false)
 
     #item("* TURB sw", "AUTO", "CM2", true)
-    ])
+  ])
+  #smallheading[Weather Radar]
+  #indent([
+    #item("* RADAR sw", "OFF", "CM2", false)
+
+    #item("* WINDSHEAR / PWS sw", "OFF", "CM2", false)
+
+    #item("* GAIN knob", "AUTO/CAL", "CM2", false)
+
+    #item("* MODE selector", "AS RQRD", "CM2", true)
+  ])
+  #smallheading[L/G]
+  #indent([
+    #item("L/G lever", "DOWN", "CM2", true)
+  ])
+  #smallheading[WIPERS]
+  #indent([
+    #item("Both WIPER selectors", "OFF", "CM2", true)
+  ])
+  #pagefooter(operatorAbbreviated, aircraft, documentAbbreviated, h1Abbreviated, h2Abbreviated, h3Abbreviated, dateLastModified)
 ])
 }

@@ -1,4 +1,5 @@
 #import "./../templates/pageheader.typ": *
+#import "./../templates/pagefooter.typ": *
 #import "./../templates/sectionheadingbox.typ": *
 #import "./../templates/warningbox.typ": *
 #import "./../templates/indent.typ": *

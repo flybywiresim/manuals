@@ -1,18 +1,26 @@
-#let document = [Flight Crew\ Operating Manual]
+#let operatorAbbreviated = "FBW"
 #let aircraft = "A32NX"
+#let document = [Flight Crew\ Operating Manual]
+#let documentAbbreviated = "FCOM"
 #let h1 = "Procedures"
+#let h1Abbreviated = "PRO"
 #let h2 = "Normal Procedures"
+#let h2Abbreviated = "NOR"
 #let h3 = "Standard Operating Procedures"
+#let h3Abbreviated = "SOP"
 
 #let sop() = {
 
 set text(
   font: "Familjen Grotesk",
   size: 9pt,
+  hyphenate: false,
 )
 set page(
   paper: "a5",
-  margin: (x: 1.8cm, y: 0.8cm),
+  margin: (inside: 1.7cm, outside: 0.5cm, top: 3.0cm, bottom: 1.8cm),
+  header-ascent: 15%,
+  footer-descent: 10%,
 )
 set par(
   justify: true,
@@ -36,5 +44,5 @@ text[hello world]
 include("./exterior-inspection/index.typ")
 
 import "./preliminary-cockpit-preparation/index.typ": *
-sop--preliminary-cockpit-preparation(document, aircraft, h1, h2, h3, "- Preliminary Cockpit Preparation")
+sop--preliminary-cockpit-preparation(operatorAbbreviated, aircraft, document, documentAbbreviated, h1, h1Abbreviated, h2, h2Abbreviated, h3, h3Abbreviated, "- Preliminary Cockpit Preparation")
 }
