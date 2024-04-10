@@ -37,7 +37,7 @@ indent([
   #smallheading[Eng]
 
   #indent([
-    #item("Eng 1,2 master levers", "OFF", "CM2", false)
+    #item("Eng 1,2 MASTER LEVERS", "OFF", "CM2", false)
 
     #item("ENG MODE selector", "NORM", "CM2", true)
   ])
@@ -72,6 +72,5 @@ indent([
   #indent([
     #item("Both WIPER selectors", "OFF", "CM2", true)
   ])
-  #pagefooter(operatorAbbreviated, aircraft, documentAbbreviated, h1Abbreviated, h2Abbreviated, h3Abbreviated, dateLastModified)
 ])
 }

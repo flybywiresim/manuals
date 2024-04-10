@@ -1,7 +1,7 @@
 #let item(item, state, crew, end) = {
 
   style(styles => {
-    text(upper(item))
+    text(item)
     box(width: 1fr, repeat[.])
     text(upper(state))
     if end == false {
