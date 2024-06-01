@@ -38,30 +38,14 @@ indent([
 
   #indent([
     #item("Eng 1,2 MASTER LEVERS", "OFF", "CM2", false)
-
     #item("ENG MODE selector", "NORM", "CM2", true)
   ])
 
   #smallheading[Weather Radar]
   #indent([
-    #item("* XWR/PWS sw", "OFF", "CM2", false)
-
-    #item("* CAPT DISPLAY mode selector", "OFF", "CM2", false)
-
-    #item("* F/O DISPLAY mode selector", "OFF", "CM2", false)
-
-    #item("* GAIN knob", "AUTO", "CM2", false)
-
-    #item("* TURB sw", "AUTO", "CM2", true)
-  ])
-  #smallheading[Weather Radar]
-  #indent([
     #item("* RADAR sw", "OFF", "CM2", false)
-
     #item("* WINDSHEAR / PWS sw", "OFF", "CM2", false)
-
     #item("* GAIN knob", "AUTO/CAL", "CM2", false)
-
     #item("* MODE selector", "AS RQRD", "CM2", true)
   ])
   #smallheading[L/G]
@@ -72,5 +56,51 @@ indent([
   #indent([
     #item("Both WIPER selectors", "OFF", "CM2", true)
   ])
+])
+
+pagebreak()
+sectionheadingbox[Batteries Check/External Power]
+indent([
+  #squaredot[If the aircraft has not been electrically supplied for 6 h or more, perform the following check:]
+  #indent[
+    #item("BAT 1 pb-sw and BAT 2 pb-sw", "CHECK OFF", "CM2", false)
+    #item("BAT 1 and 2 VOLTAGE", "CHECK ABOVE 25.5 V", "CM2", true)
+
+    #L2()#italic[Battery voltage above 25.5 V ensures a charge above 50 %]
+
+    #L1()#squaredot[If the battery voltage is at or below 25.5 V:]
+
+    #indent[
+      A charging cycle of about 20 min is required.
+
+      #item("BAT 1 pb-sw and BAT 2 pb-sw", "AUTO", "CM2", false)
+      #item("EXT PWR pb-sw", "ON", "CM2", true)
+
+      #L2()Check on #underline[ELEC] SD page, #italic[that the battery contactor is closed and the batteries are charging.]
+
+      #L1()#rounddot[After 20 min:]
+
+      #indent[
+        #item("BAT 1 pb-sw and BAT 2 pb-sw.", "OFF", "CM2", false)
+        #item("BAT 1 and 2 VOLTAGE.", "CHECK ABOVE 25.5 V", "CM2", false)
+        #item("BAT 1 pb-sw and BAT 2 pb-sw.", "AUTO", "CM2", true)
+      ]
+    ]
+    #squaredot[If the battery voltage is above 25.5 V:]
+    #indent[
+      #item("BAT 1 pb-sw and BAT 2 pb-sw.", "AUTO", "CM2", true)
+
+      #L2()#italic[If the APU is started on batteries only, it should be started within 30 min after the selection of batteries to AUTO (35 min after battery selection to AUTO, the battery charge is less than 25 % of maximum capacity)]
+    ]
+  ]
+  #L1()#squaredot[If the aircraft has been electrically supplied during the last 6 h:]
+  #indent[
+    #item("BAT 1 pb-sw and BAT 2 pb-sw.", "AUTO", "CM2", true)
+
+    #rounddot[If the #green[AVAIL] light is on:]
+    #indent[
+      #item("EXT PWR pb-sw", "ON", "CM2", true)
+    ]
+  ]
 ])
 }

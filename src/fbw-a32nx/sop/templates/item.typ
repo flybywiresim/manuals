@@ -13,6 +13,7 @@
       width: 41pt,
       align(right)[#text(upper(crew))],
       )
+    linebreak()
   })
   
 }

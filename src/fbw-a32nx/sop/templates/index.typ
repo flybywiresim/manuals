@@ -5,3 +5,11 @@
 #import "./../templates/indent.typ": *
 #import "./../templates/smallheading.typ": *
 #import "./../templates/item.typ": *
+#import "./../templates/squaredot.typ": *
+#import "./../templates/rounddot.typ": *
+#import "./../templates/L1.typ": *
+#import "./../templates/L2.typ": *
+#import "./../templates/L3.typ": *
+#import "./../templates/italic.typ": *
+#import "./../templates/red.typ": *
+#import "./../templates/green.typ": *
