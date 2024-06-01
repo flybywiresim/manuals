@@ -1,6 +1,6 @@
 #let warningbox(body) = {
   table(
-    columns: (60pt, auto,),
+    columns: (60pt, 1fr),
     inset: 5pt,
     align: center,
     stroke: red,
