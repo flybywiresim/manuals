@@ -40,10 +40,45 @@ set page(
 sectionheadingbox[SAFETY EXTERIOR INSPECTION]
 
 tasksharingtable(
+  "",
+  "CM1", "CM2",
+  [], [#item("* WHEEL CHOCKS", "CHECK")],
+  [], [#item("* L/G DOORS", "CHECK POSITION")],
+  [], [#item("* APU AREA", "CHECK")],
+)
+
+sectionheadingbox[PRELIMINARY COCKPIT PREPARATION]
+
+tasksharingtable(
   "AIRCRAFT SETUP:",
   "CM1", "CM2",
-  [], [2],
-  [], [4]
+  [], [#item("ENG 1, 2 MASTER LEVERS", "OFF")],
+  [], [#item("ENG MODE selector", "NORM")],
+  [], [#item("* WEATHER RADAR", "OFF")],
+  [], [#item("* WINDSHEAR/PWS sw", "OFF")],
+  [], [#item("L/G lever", "DOWN")],
+  [], [#item("Both WIPER selectors", "OFF")],
+)
+
+tasksharingtable(
+  "BATTERIES/EXTERNAL POWER:",
+  "CM1", "CM2",
+  [], [#item("BAT", "CHECK/AUTO")],
+  [], [#item("EXT PWR pb", "ON")],
+)
+
+tasksharingtable(
+  "APU FIRE TEST/APU START:",
+  "CM1", "CM2",
+  [], [#item("RMP", "CHECK ON/SET")],
+  [], [#item("APU FIRE TEST", "PERFORM")],
+  [], [#item("APU", "START")],
+  [], [
+    #rounddot[When the APU is AVAIL:]
+    #linebreak()
+    #item("APU", "START")
+    ],
+  [], [#item("* EXT PWR pb", "AS RQRD")],
 )
 
 }
