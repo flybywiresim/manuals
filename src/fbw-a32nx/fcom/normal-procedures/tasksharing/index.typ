@@ -37,5 +37,14 @@ set page(
   footer: pagefooter(operatorAbbreviated, aircraft, documentAbbreviated, h1Abbreviated, h2Abbreviated, h3Abbreviated, dateLastModified)
 )
 
+sectionheadingbox[SAFETY EXTERIOR INSPECTION]
+
+tasksharingtable(
+  "AIRCRAFT SETUP:",
+  "CM1", "CM2",
+  [], [2],
+  [], [4]
+)
+
 }
 

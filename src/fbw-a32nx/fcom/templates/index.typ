@@ -13,3 +13,4 @@
 #import "./../templates/italic.typ": *
 #import "./../templates/red.typ": *
 #import "./../templates/green.typ": *
+#import "./../templates/tasksharingtable.typ": *
