@@ -41,8 +41,9 @@ set page(foreground: none)
 
 text[hello world]
 
-include("./exterior-inspection/index.typ")
+import "./safety-exterior-inspection/index.typ": *
+sop--safety-exterior-inspection(operatorAbbreviated, aircraft, document, documentAbbreviated, h1, h1Abbreviated, h2, h2Abbreviated, h3, h3Abbreviated)
 
 import "./preliminary-cockpit-preparation/index.typ": *
-sop--preliminary-cockpit-preparation(operatorAbbreviated, aircraft, document, documentAbbreviated, h1, h1Abbreviated, h2, h2Abbreviated, h3, h3Abbreviated, "- Preliminary Cockpit Preparation")
+sop--preliminary-cockpit-preparation(operatorAbbreviated, aircraft, document, documentAbbreviated, h1, h1Abbreviated, h2, h2Abbreviated, h3, h3Abbreviated)
 }
