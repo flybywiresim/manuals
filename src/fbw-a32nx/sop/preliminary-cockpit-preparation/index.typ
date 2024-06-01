@@ -28,39 +28,39 @@ The safety checks prevent the inadvertent operation of aircraft systems, danger 
 ]
 
 sectionheadingbox[Aircraft Setup]
-indent([
+indent[
   #smallheading[General]
 
-  #indent(
-    warningbox[Do not pressurize the hydraulic systems until clearance is obtained from ground personnel.]
-  )
+  #indent[
+    #warningbox[Do not pressurize the hydraulic systems until clearance is obtained from ground personnel.]
+  ]
   #smallheading[Eng]
 
-  #indent([
+  #indent[
     #item("Eng 1,2 MASTER LEVERS", "OFF", "CM2", false)
     #item("ENG MODE selector", "NORM", "CM2", true)
-  ])
+  ]
 
   #smallheading[Weather Radar]
-  #indent([
+  #indent[
     #item("* RADAR sw", "OFF", "CM2", false)
     #item("* WINDSHEAR / PWS sw", "OFF", "CM2", false)
     #item("* GAIN knob", "AUTO/CAL", "CM2", false)
     #item("* MODE selector", "AS RQRD", "CM2", true)
-  ])
+  ]
   #smallheading[L/G]
-  #indent([
+  #indent[
     #item("L/G lever", "DOWN", "CM2", true)
-  ])
+  ]
   #smallheading[WIPERS]
-  #indent([
+  #indent[
     #item("Both WIPER selectors", "OFF", "CM2", true)
-  ])
-])
+  ]
+]
 
 pagebreak()
 sectionheadingbox[Batteries Check/External Power]
-indent([
+indent[
   #squaredot[If the aircraft has not been electrically supplied for 6 h or more, perform the following check:]
   #indent[
     #item("BAT 1 pb-sw and BAT 2 pb-sw", "CHECK OFF", "CM2", false)
@@ -102,5 +102,5 @@ indent([
       #item("EXT PWR pb-sw", "ON", "CM2", true)
     ]
   ]
-])
+]
 }
