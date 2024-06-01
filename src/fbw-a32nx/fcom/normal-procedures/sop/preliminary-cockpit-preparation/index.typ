@@ -39,15 +39,15 @@ indent[
   #smallheading[Eng]
 
   #indent[
-    #item("Eng 1,2 MASTER LEVERS", "OFF", "CM2", false)
+    #item("Eng 1,2 MASTER LEVERS", "OFF", "CM2")
     #item("ENG MODE selector", "NORM", "CM2", true)
   ]
 
   #smallheading[Weather Radar]
   #indent[
-    #item("* RADAR sw", "OFF", "CM2", false)
-    #item("* WINDSHEAR / PWS sw", "OFF", "CM2", false)
-    #item("* GAIN knob", "AUTO/CAL", "CM2", false)
+    #item("* RADAR sw", "OFF", "CM2")
+    #item("* WINDSHEAR / PWS sw", "OFF", "CM2")
+    #item("* GAIN knob", "AUTO/CAL", "CM2")
     #item("* MODE selector", "AS RQRD", "CM2", true)
   ]
   #smallheading[L/G]
@@ -67,7 +67,7 @@ indent[
     If the aircraft has not been electrically supplied for 6 h or more, perform the following check:
   ]
   #indent[
-    #item("BAT 1 pb-sw and BAT 2 pb-sw", "CHECK OFF", "CM2", false)
+    #item("BAT 1 pb-sw and BAT 2 pb-sw", "CHECK OFF", "CM2")
     #item("BAT 1 and 2 VOLTAGE", "CHECK ABOVE 25.5 V", "CM2", true)
 
     #L2()#italic[Battery voltage above 25.5 V ensures a charge above 50 %]
@@ -77,7 +77,7 @@ indent[
     #indent[
       A charging cycle of about 20 min is required.
 
-      #item("BAT 1 pb-sw and BAT 2 pb-sw", "AUTO", "CM2", false)
+      #item("BAT 1 pb-sw and BAT 2 pb-sw", "AUTO", "CM2")
       #item("EXT PWR pb-sw", "ON", "CM2", true)
 
       #L2()Check on #underline[ELEC] SD page, #italic[that the battery contactor is closed and the batteries are charging.]
@@ -85,8 +85,8 @@ indent[
       #L1()#rounddot[After 20 min:]
 
       #indent[
-        #item("BAT 1 pb-sw and BAT 2 pb-sw.", "OFF", "CM2", false)
-        #item("BAT 1 and 2 VOLTAGE.", "CHECK ABOVE 25.5 V", "CM2", false)
+        #item("BAT 1 pb-sw and BAT 2 pb-sw.", "OFF", "CM2")
+        #item("BAT 1 and 2 VOLTAGE.", "CHECK ABOVE 25.5 V", "CM2")
         #item("BAT 1 pb-sw and BAT 2 pb-sw.", "AUTO", "CM2", true)
       ]
     ]
@@ -117,9 +117,9 @@ sectionheadingbox[APU Fire Test/APU Start]
 indent[
   #smallheading[RMP]
   #indent[
-    #item("RMP", "CHECK ON/SET", "CM2", false)
-    #item("Green NAV light", "CHECK OFF", "CM2", false)
-    #item("SEL light", "CHECK OFF", "CM2", false)
+    #item("RMP", "CHECK ON/SET", "CM2")
+    #item("Green NAV light", "CHECK OFF", "CM2")
+    #item("SEL light", "CHECK OFF", "CM2")
     #item("COM FREQUENCIES", "TUNE", "CM2", true)
 
     #L2()#italic[
@@ -132,8 +132,8 @@ indent[
       The automatic shutdown of the APU and the discharge of the APU fire extinguisher bottle may occur if the flight crew presses the APU FIRE test pb for more than 3 seconds.
     ]
 
-    #item("APU FIRE pb-sw", "CHECK IN and GUARDED", "CM2", false)
-    #item("APU AGENT light", "CHECK OFF", "CM2", false)
+    #item("APU FIRE pb-sw", "CHECK IN and GUARDED", "CM2")
+    #item("APU AGENT light", "CHECK OFF", "CM2")
     #item("APU FIRE TEST pb", "PRESS and MAINTAIN", "CM2", true)
   ]
 ]
