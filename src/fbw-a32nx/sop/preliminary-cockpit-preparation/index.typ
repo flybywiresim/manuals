@@ -32,7 +32,9 @@ indent[
   #smallheading[General]
 
   #indent[
-    #warningbox[Do not pressurize the hydraulic systems until clearance is obtained from ground personnel.]
+    #warningbox[
+      Do not pressurize the hydraulic systems until clearance is obtained from ground personnel.
+    ]
   ]
   #smallheading[Eng]
 
@@ -61,7 +63,9 @@ indent[
 pagebreak()
 sectionheadingbox[Batteries Check/External Power]
 indent[
-  #squaredot[If the aircraft has not been electrically supplied for 6 h or more, perform the following check:]
+  #squaredot[
+    If the aircraft has not been electrically supplied for 6 h or more, perform the following check:
+  ]
   #indent[
     #item("BAT 1 pb-sw and BAT 2 pb-sw", "CHECK OFF", "CM2", false)
     #item("BAT 1 and 2 VOLTAGE", "CHECK ABOVE 25.5 V", "CM2", true)
@@ -90,10 +94,14 @@ indent[
     #indent[
       #item("BAT 1 pb-sw and BAT 2 pb-sw.", "AUTO", "CM2", true)
 
-      #L2()#italic[If the APU is started on batteries only, it should be started within 30 min after the selection of batteries to AUTO (35 min after battery selection to AUTO, the battery charge is less than 25 % of maximum capacity)]
+      #L2()#italic[
+        If the APU is started on batteries only, it should be started within 30 min after the selection of batteries to AUTO (35 min after battery selection to AUTO, the battery charge is less than 25 % of maximum capacity)
+      ]
     ]
   ]
-  #L1()#squaredot[If the aircraft has been electrically supplied during the last 6 h:]
+  #L1()#squaredot[
+    If the aircraft has been electrically supplied during the last 6 h:
+    ]
   #indent[
     #item("BAT 1 pb-sw and BAT 2 pb-sw.", "AUTO", "CM2", true)
 
@@ -101,6 +109,32 @@ indent[
     #indent[
       #item("EXT PWR pb-sw", "ON", "CM2", true)
     ]
+  ]
+]
+
+pagebreak()
+sectionheadingbox[APU Fire Test/APU Start]
+indent[
+  #smallheading[RMP]
+  #indent[
+    #item("RMP", "CHECK ON/SET", "CM2", false)
+    #item("Green NAV light", "CHECK OFF", "CM2", false)
+    #item("SEL light", "CHECK OFF", "CM2", false)
+    #item("COM FREQUENCIES", "TUNE", "CM2", true)
+
+    #L2()#italic[
+      Use VHF 1 for ATC (only VHF 1 is available in emergency electrical configuration), VHF 2 for ATIS and company frequencies. VHF 3 is normally devoted to ACARS.
+      ]
+  ]
+  #smallheading[APU]
+  #indent[
+    #warningbox[
+      The automatic shutdown of the APU and the discharge of the APU fire extinguisher bottle may occur if the flight crew presses the APU FIRE test pb for more than 3 seconds.
+    ]
+
+    #item("APU FIRE pb-sw", "CHECK IN and GUARDED", "CM2", false)
+    #item("APU AGENT light", "CHECK OFF", "CM2", false)
+    #item("APU FIRE TEST pb", "PRESS and MAINTAIN", "CM2", true)
   ]
 ]
 }
