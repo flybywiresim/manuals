@@ -3,7 +3,7 @@
 #let dateLastModified = datetime.today()
 #let thisSection = "Preliminary Cockpit Preparation"
 
-#let sop--preliminary-cockpit-preparation(operatorAbbreviated, aircraft, document, documentAbbreviated, h1, h1Abbreviated, h2, h2Abbreviated, h3, h3Abbreviated, h4) = {
+#let sop--preliminary-cockpit-preparation(operatorAbbreviated, aircraft, document, documentAbbreviated, h1, h1Abbreviated, h2, h2Abbreviated, h3, h3Abbreviated) = {
 
 
 set page("us-letter")
