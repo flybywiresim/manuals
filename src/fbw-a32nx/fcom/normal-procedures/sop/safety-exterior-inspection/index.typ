@@ -1,4 +1,4 @@
-#import "./../templates/index.typ": *
+#import "./../../../templates/index.typ": *
 
 #let dateLastModified = datetime.today()
 #let thisSection = "Safety Exterior Inspection"
