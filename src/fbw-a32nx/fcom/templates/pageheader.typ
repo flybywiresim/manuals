@@ -1,4 +1,12 @@
-#let pageheader(aircraft, document,h1,h2,..h3and4) = {
+#let pageheader(aircraft, document,h1,h2,..sink) = {
+  let h3 = ""
+  let h4 = ""
+  if (sink.pos().at(0) != "") {
+    h3 = sink.pos().at(0)
+  }
+  if (sink.pos().len() > 1) {
+    h4 = sink.pos().at(1)
+  }
   table(
     columns: (100pt, 1fr),
     inset: 3pt,
@@ -29,12 +37,12 @@
       [#box(
         height: 16pt,
         align(center + horizon)[
-          #if not h3and4.pos().len() > 1 [
-            #text(black, size: 8pt, hyphenate: false, upper([#h3and4.pos().first()]))
-          ] else if (h3and4.pos().first().len() + " - ".len() +  h3and4.pos().last().len()) > 60 [
-            #text(black, size: 8pt, hyphenate: false, upper([#h3and4.pos().first() \ - #h3and4.pos().last()]))
+          #if h4 == "" [
+            #text(black, size: 8pt, hyphenate: false, upper([#h3]))
+          ] else if (h3.len() + " - ".len() +  h4.len()) > 60 [
+            #text(black, size: 8pt, hyphenate: false, upper([#h3 \ - #h4]))
           ] else [
-            #text(black, size: 8pt, hyphenate: false, upper(h3and4.pos().first() + " - " + h3and4.pos().last()))
+            #text(black, size: 8pt, hyphenate: false, upper(h3 + " - " + h4))
           ]
         ]
       )],
