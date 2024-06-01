@@ -1,4 +1,4 @@
-#let pageheader(aircraft, document,h1,h2,h3, h4) = {
+#let pageheader(aircraft, document,h1,h2,..h3and4) = {
   table(
     columns: (100pt, 1fr),
     inset: 3pt,
@@ -29,10 +29,12 @@
       [#box(
         height: 16pt,
         align(center + horizon)[
-          #if (h3.len() + " - ".len() +  h4.len()) > 60 [
-            #text(black, size: 8pt, hyphenate: false, upper([#h3 \ - #h4]))
+          #if not h3and4.pos().len() > 1 [
+            #text(black, size: 8pt, hyphenate: false, upper([#h3and4.pos().first()]))
+          ] else if (h3and4.pos().first().len() + " - ".len() +  h3and4.pos().last().len()) > 60 [
+            #text(black, size: 8pt, hyphenate: false, upper([#h3and4.pos().first() \ - #h3and4.pos().last()]))
           ] else [
-            #text(black, size: 8pt, hyphenate: false, upper(h3 + " - " + h4))
+            #text(black, size: 8pt, hyphenate: false, upper(h3and4.pos().first() + " - " + h3and4.pos().last()))
           ]
         ]
       )],
