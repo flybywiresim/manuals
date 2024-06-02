@@ -30,6 +30,7 @@ set par(
 
 import "./../../templates/index.typ": *
 let dateLastModified = datetime.today()
+let subsection = counter("subsection")
 
 set page(
   paper: "a5",
@@ -39,7 +40,7 @@ set page(
   numbering: "1 / 1"
 )
 
-sectionheadingbox[SAFETY EXTERIOR INSPECTION <A>]
+sectionheadingbox[SAFETY EXTERIOR INSPECTION <PRO-NOR-TSK-A>]; subsection.step()
 
 tasksharingtable(
   "",
@@ -49,7 +50,7 @@ tasksharingtable(
   [], [#item("* APU AREA", "CHECK")],
 )
 
-sectionheadingbox[PRELIMINARY COCKPIT PREPARATION <B>]
+sectionheadingbox[PRELIMINARY COCKPIT PREPARATION <PRO-NOR-TSK-B>]; subsection.step()
 
 tasksharingtable(
   "AIRCRAFT SETUP:",
