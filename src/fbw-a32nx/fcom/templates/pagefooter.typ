@@ -1,4 +1,4 @@
-#let pagefooter(operatorAbbreviated, aircraft, documentAbbreviated, h1Abbreviated, h2Abbreviated, h3Abbreviated, dateLastModified) = {
+#let pagefooter(operatorAbbreviated, aircraft, documentAbbreviated, h1Abbreviated, h2Abbreviated, h3Abbreviated, sectionEnd, dateLastModified) = {
 pad(bottom: -5pt, line(
   length: 100%,
   stroke: 1pt,
@@ -13,7 +13,7 @@ grid(
   [],
   grid.cell(
     align: right,
-    text(h1Abbreviated + "-" + h2Abbreviated + "-" + h3Abbreviated),
+    context(text(h1Abbreviated + "-" + h2Abbreviated + "-" + h3Abbreviated + " P " + counter(page).display()+ "/" + str(counter(page).at(locate(sectionEnd)).at(0)))),
   ),
   grid.cell(
     align: left,

@@ -2,6 +2,8 @@
 
 #let dateLastModified = datetime.today()
 #let thisSection = "Safety Exterior Inspection"
+#let thisSectionAbbreviated = "-03"
+#let sectionEndLabel = <NOR-PRO-SOP-03-END>
 
 #let sop--safety-exterior-inspection(operatorAbbreviated, aircraft, document, documentAbbreviated, h1, h1Abbreviated, h2, h2Abbreviated, h3, h3Abbreviated) = {
 
@@ -17,8 +19,10 @@ set page(
   paper: "a5",
   foreground:none,
   header: pageheader(aircraft, document, h1, h2, h3, thisSection),
-  footer: pagefooter(operatorAbbreviated, aircraft, documentAbbreviated, h1Abbreviated, h2Abbreviated, h3Abbreviated, dateLastModified)
+  footer: pagefooter(operatorAbbreviated, aircraft, documentAbbreviated, h1Abbreviated, h2Abbreviated, h3Abbreviated+thisSectionAbbreviated, sectionEndLabel, dateLastModified)
 )
+
+counter(page).update(1)
 
 sectionheadingbox[SAFETY EXTERIOR INSPECTION]
 indent[
@@ -53,4 +57,6 @@ indent[
     ]
   ]
 ]
+
+context[#metadata("End of section Safety Exterior Inspection") #sectionEndLabel]
 }
