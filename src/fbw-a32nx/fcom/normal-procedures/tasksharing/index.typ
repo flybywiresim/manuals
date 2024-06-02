@@ -55,7 +55,7 @@ tasksharingtable(
   [], [#item("ENG 1, 2 MASTER LEVERS", "OFF")],
   [], [#item("ENG MODE selector", "NORM")],
   [], [#item("* WEATHER RADAR", "OFF")],
-  [], [#item("* WINDSHEAR/PWS sw", "OFF")],
+  [], [#item("* WINDSHEAR/PWS " + optiontriangle() + " sw", "OFF")],
   [], [#item("L/G lever", "DOWN")],
   [], [#item("Both WIPER selectors", "OFF")],
 )

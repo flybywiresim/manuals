@@ -14,3 +14,4 @@
 #import "./../templates/red.typ": *
 #import "./../templates/green.typ": *
 #import "./../templates/tasksharingtable.typ": *
+#import "./../templates/optiontriangle.typ": *
