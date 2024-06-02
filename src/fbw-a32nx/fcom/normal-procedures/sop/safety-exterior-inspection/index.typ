@@ -7,6 +7,8 @@
 
 #let sop--safety-exterior-inspection(operatorAbbreviated, aircraft, document, documentAbbreviated, h1, h1Abbreviated, h2, h2Abbreviated, h3, h3Abbreviated) = {
 
+let subsection = counter("subsection")
+
 
 set page("us-letter")
 set page(foreground: image("./images/cover_safety_exterior_inspection.png"))
@@ -24,7 +26,7 @@ set page(
 
 counter(page).update(1)
 
-sectionheadingbox[SAFETY EXTERIOR INSPECTION]
+sectionheadingbox[SAFETY EXTERIOR INSPECTION]; subsection.step()
 indent[
   #smallheading[GENERAL]
 

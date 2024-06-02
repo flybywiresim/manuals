@@ -48,4 +48,5 @@
       )],
     )],
   )
+  context[#metadata("pageheader") <pageheader>]
 }
