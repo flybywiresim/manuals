@@ -93,5 +93,79 @@ tasksharingtable(
   [#item("* COCKPIT LIGHTS", "AS RQRD")], [#item("* COCKPIT LIGHTS", "AS RQRD")],
 )
 
+tasksharingtable(
+  "EFB INITIALIZATION:",
+  "CM1", "CM2",
+  [#item("All EFB", "START")], [#item("All EFB", "START")],
+  [#item("EFB/eQRH Version", "CHECK")], [#item("EFB/eQRH Version", "CHECK")],
+  combinedcell[
+    #rounddot([If EFB SYNCHRO AVNCS #optiontriangle() is used:], false)
+    #linebreak()
+    #underline[FMGS PRE-INITIALIZATION:]
+  ],
+  table.hline(stroke: none),
+  [#indent(item("* ENGINE & AIRCRAFT TYPE", "CHECK"))],[],
+  table.hline(stroke: none),
+  [#indent(item("* DATABASE VALID", "CHECK"))],[],
+  table.hline(stroke: none),
+  combinedcell([
+      #item("* FLT NBR & FROM/TO", "INSERT/CHECK")
+      #item("* FLT NBR & FROM/TO", "INSERT/CHECK")
+  ], center),
+  [#item("* EFB SYNCHRO AVIONICS", "CLICK")], [#item("* EFB SYNCHRO AVIONICS", "CLICK")],
+  [#item("* EFB STATUS page", "INSERT/CHECK")], [#item("* EFB STATUS page", "INSERT/CHECK")],
+)
+
+tasksharingtable(
+  "AIRCRAFT ACCEPTANCE:",
+  "CM1", "CM2",
+  [#item("* RCL pb", "PRESS 3 s")], [],
+  combinedcell([
+      #item("* LOGBOOK AND MEL/CDL ITEMS", "CHECK")
+  ], center),
+  combinedcell([
+      #item("* AIRCRAFT CONFIGURATION SUMMARY", "CHECK")
+  ], center),
+  combinedcell([
+      #item("* OEB", "CHECK")
+  ], center),
+  [#item("* AIRCRAFT ACCEPTANCE", "PERFORM")], [],
+)
+
+tasksharingtable(
+  "PRELIMINARY PERFORMANCE DETERMINATION:",
+  "CM1", "CM2",
+  [#item("* AIRFIELD DATA", "OBTAIN")], [#item("* AIRFIELD DATA", "OBTAIN")],
+  combinedcell[
+    #rounddot([If the LOADSHEET application is used], false)
+  ],
+  table.hline(stroke: none),
+  [#text(size: 7.5pt, item("* PRELIMINARY LOADING", "COMPUTE/CROSSCHECK"))],[#text(size: 7.5pt, item("* PRELIMINARY LOADING", "COMPUTE/CROSSCHECK"))],
+  [#item("* MEL/CDL ITEMS", "CHECK ACTIVATED")],[#item("* MEL/CDL ITEMS", "CHECK ACTIVATED")],
+  combinedcell([
+      #item("NAV CHARTS CLIPBOARD", "PREPARE")
+  ], center),
+  [#item("* PRELIM T.O PERF DATA", "COMPUTE")],[#item("* PRELIM T.O PERF DATA", "COMPUTE")],
+  combinedcell([
+      #item("* PRELIM T.O PERF DATA.", "CROSSCHECK")
+  ], center),
+)
+
+tasksharingtable(
+  "BEFORE WALKAROUND:",
+  "PF", "PM",
+  [], [#text(size: 7.5pt, item("* ECAM OXY PRESS/HYD QTY/ENG OIL QTY", "CHECK"))],
+  [], [#item("FLAPS", "CHECK POSITION")],
+  [], [#item("* SPEED BRAKE lever", "CHECK RET AND DISARMED")],
+  [], [#item("* ACCU PRESS", "CHECK")],
+  [], [#item("* PARK BRK handle", "ON")],
+  [], [#item("* BRAKES PRESS indicator", "CHECK")],
+  [], [#item("EMER EQPT", "CHECK")],
+  [], [#item("RAIN REPELLENT " + optiontriangle() + " ", "CHECK")],
+  [], [#item("C/B PANELS", "CHECK")],
+  [], [#item("* GEAR PINS", "CHECK ONBOARD/STOWED")],
+  [], [#item("* EXTERIOR WALKAROUND", "PERFORM")],
+)
+
 }
 
