@@ -156,7 +156,7 @@ tasksharingtable(
   "PF", "PM",
   [], [#text(size: 7.5pt, item("* ECAM OXY PRESS/HYD QTY/ENG OIL QTY", "CHECK"))],
   [], [#item("FLAPS", "CHECK POSITION")],
-  [], [#item("* SPEED BRAKE lever", "CHECK RET AND DISARMED")],
+  [], [#text(size: 8pt, item("* SPEED BRAKE lever", "CHECK RET AND DISARMED"))],
   [], [#item("* ACCU PRESS", "CHECK")],
   [], [#item("* PARK BRK handle", "ON")],
   [], [#item("* BRAKES PRESS indicator", "CHECK")],
