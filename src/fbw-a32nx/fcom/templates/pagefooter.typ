@@ -21,11 +21,17 @@ grid(
     text(documentAbbreviated)
   ),
   [#context{
-    let startsubsection = numbering("A", counter("subsection").at(locate(query(selector(<pageheader>).before(here())).last().location())).at(0)).replace("-", "A")
-    let endsubsection = numbering("A", counter("subsection").at(locate(here())).at(0))
+    let startSubSection = counter("subsection").at(locate(query(selector(<pageheader>).before(here())).last().location())).at(0)
+    let endSubSection = counter("subsection").at(locate(here())).at(0)
     let sectionHeadingBoxesOnPage = query(selector(<sectionheadingbox>).before(here())).len() - query(selector(<sectionheadingbox>).before(locate(query(selector(<pageheader>).before(here())).last().location()))).len()
 
-    startsubsection + " - " + str(sectionHeadingBoxesOnPage) + " - " + endsubsection
+    if endSubSection - startSubSection <= 1 {
+      numbering("A", startSubSection).replace("-", "A")
+    } else if endSubSection - startSubSection - sectionHeadingBoxesOnPage > 0 {
+      numbering("A", startSubSection).replace("-", "A") +  " to " + numbering("A", endSubSection - 1)
+    } else {
+      numbering("A", startSubSection).replace("-", "A") +  " to " + numbering("A", endSubSection)
+    }
   }
   ],
   grid.cell(

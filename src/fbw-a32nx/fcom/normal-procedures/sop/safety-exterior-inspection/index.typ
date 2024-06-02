@@ -7,6 +7,9 @@
 
 #let sop--safety-exterior-inspection(operatorAbbreviated, aircraft, document, documentAbbreviated, h1, h1Abbreviated, h2, h2Abbreviated, h3, h3Abbreviated) = {
 
+let subsection = counter("subsection")
+subsection.update(0)
+
 set page("us-letter")
 set page(foreground: image("./images/cover_safety_exterior_inspection.png"))
 text[Safety Exterior Inspection]
@@ -21,8 +24,6 @@ set page(
   footer: pagefooter(operatorAbbreviated, aircraft, documentAbbreviated, h1Abbreviated, h2Abbreviated, h3Abbreviated+thisSectionAbbreviated, sectionEndLabel, dateLastModified)
 )
 
-let subsection = counter("subsection")
-subsection.update(0)
 counter(page).update(1)
 
 sectionheadingbox[SAFETY EXTERIOR INSPECTION]; subsection.step()
