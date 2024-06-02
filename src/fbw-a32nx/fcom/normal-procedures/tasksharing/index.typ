@@ -74,7 +74,7 @@ tasksharingtable(
   [], [#item("APU FIRE TEST", "PERFORM")],
   [], [#item("APU", "START")],
   [], [
-    #rounddot[When the APU is AVAIL:]
+    #rounddot([When the APU is AVAIL:], false)
     #linebreak()
     #item("APU", "START")
     ],
