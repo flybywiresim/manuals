@@ -30,7 +30,6 @@ set par(
 
 import "./../../templates/index.typ": *
 let dateLastModified = datetime.today()
-let subsection = counter("subsection")
 
 set page(
   paper: "a5",
@@ -39,6 +38,9 @@ set page(
   footer: pagefooter(operatorAbbreviated, aircraft, documentAbbreviated, h1Abbreviated, h2Abbreviated, h3Abbreviated, sectionEndLabel, dateLastModified),
   numbering: "1 / 1"
 )
+
+let subsection = counter("subsection")
+subsection.update(0)
 
 sectionheadingbox[SAFETY EXTERIOR INSPECTION <PRO-NOR-TSK-A>]; subsection.step()
 

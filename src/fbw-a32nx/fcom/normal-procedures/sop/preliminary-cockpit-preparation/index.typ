@@ -7,8 +7,6 @@
 
 #let sop--preliminary-cockpit-preparation(operatorAbbreviated, aircraft, document, documentAbbreviated, h1, h1Abbreviated, h2, h2Abbreviated, h3, h3Abbreviated) = {
 
-let subsection = counter("subsection")
-
 set page("us-letter")
 set page(foreground: image("./images/cover_preliminary_cockpit_preparation.png"))
 text[Preliminary cockpit preparation]
@@ -22,6 +20,9 @@ set page(
   header: pageheader(aircraft, document, h1, h2, h3, thisSection),
   footer: pagefooter(operatorAbbreviated, aircraft, documentAbbreviated, h1Abbreviated, h2Abbreviated, h3Abbreviated+thisSectionAbbreviated, sectionEndLabel, dateLastModified)
 )
+
+let subsection = counter("subsection")
+subsection.update(0)
 counter(page).update(1)
 
 
