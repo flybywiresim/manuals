@@ -6,4 +6,5 @@
     width: 100%,
     [#upper(body)],
   )
+  context[#metadata("sectionheadingbox") <sectionheadingbox>]
 }
