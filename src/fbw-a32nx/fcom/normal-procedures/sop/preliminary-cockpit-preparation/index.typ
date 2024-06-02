@@ -65,9 +65,10 @@ indent[
     #item("Both WIPER selectors", "OFF", "CM2", true)
   ]
 ]
+subsection.step()
 
 pagebreak()
-sectionheadingbox[Batteries Check/External Power]; subsection.step()
+sectionheadingbox[Batteries Check/External Power];
 indent[
   #squaredot[
     If the aircraft has not been electrically supplied for 6 h or more, perform the following check:
@@ -117,9 +118,10 @@ indent[
     ]
   ]
 ]
+subsection.step()
 
 pagebreak()
-sectionheadingbox[APU Fire Test/APU Start]; subsection.step()
+sectionheadingbox[APU Fire Test/APU Start];
 indent[
   #smallheading[RMP]
   #indent[
