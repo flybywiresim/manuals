@@ -2,6 +2,8 @@
 
 #let dateLastModified = datetime.today()
 #let thisSection = "Preliminary Cockpit Preparation"
+#let thisSectionAbbreviated = "-04"
+#let sectionEndLabel = <NOR-PRO-SOP-04-END>
 
 #let sop--preliminary-cockpit-preparation(operatorAbbreviated, aircraft, document, documentAbbreviated, h1, h1Abbreviated, h2, h2Abbreviated, h3, h3Abbreviated) = {
 
@@ -17,8 +19,10 @@ set page(
   paper: "a5",
   foreground:none,
   header: pageheader(aircraft, document, h1, h2, h3, thisSection),
-  footer: pagefooter(operatorAbbreviated, aircraft, documentAbbreviated, h1Abbreviated, h2Abbreviated, h3Abbreviated, dateLastModified)
+  footer: pagefooter(operatorAbbreviated, aircraft, documentAbbreviated, h1Abbreviated, h2Abbreviated, h3Abbreviated+thisSectionAbbreviated, sectionEndLabel, dateLastModified)
 )
+counter(page).update(1)
+
 
 sectionheadingbox[General]
 indent[Items marked by asterisks \(\*\) are the only steps to be completed after a transit stop without flight crew change. Otherwise, the new flight crew performs all the items. \ 
@@ -137,4 +141,6 @@ indent[
     #item("APU FIRE TEST pb", "PRESS and MAINTAIN", "CM2", true)
   ]
 ]
+
+context[#metadata("End of section Preliminary Cockpit Preparation") #sectionEndLabel]
 }

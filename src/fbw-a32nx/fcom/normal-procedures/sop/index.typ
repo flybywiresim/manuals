@@ -21,6 +21,7 @@ set page(
   margin: (inside: 1.7cm, outside: 0.5cm, top: 3.0cm, bottom: 1.8cm),
   header-ascent: 15%,
   footer-descent: 10%,
+  numbering: "1 / 1",
 )
 set par(
   justify: true,

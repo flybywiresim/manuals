@@ -8,6 +8,7 @@
 #let h2Abbreviated = "NOR"
 #let h3 = "Tasksharing"
 #let h3Abbreviated = "TSK"
+#let sectionEndLabel = <NOR-PRO-TSK-END>
 
 #let tasksharing() = {
 
@@ -34,10 +35,11 @@ set page(
   paper: "a5",
   foreground:none,
   header: pageheader(aircraft, document, h1, h2, h3),
-  footer: pagefooter(operatorAbbreviated, aircraft, documentAbbreviated, h1Abbreviated, h2Abbreviated, h3Abbreviated, dateLastModified)
+  footer: pagefooter(operatorAbbreviated, aircraft, documentAbbreviated, h1Abbreviated, h2Abbreviated, h3Abbreviated, sectionEndLabel, dateLastModified),
+  numbering: "1 / 1"
 )
 
-sectionheadingbox[SAFETY EXTERIOR INSPECTION]
+sectionheadingbox[SAFETY EXTERIOR INSPECTION <A>]
 
 tasksharingtable(
   "",
@@ -47,7 +49,7 @@ tasksharingtable(
   [], [#item("* APU AREA", "CHECK")],
 )
 
-sectionheadingbox[PRELIMINARY COCKPIT PREPARATION]
+sectionheadingbox[PRELIMINARY COCKPIT PREPARATION <B>]
 
 tasksharingtable(
   "AIRCRAFT SETUP:",
@@ -167,5 +169,6 @@ tasksharingtable(
   [], [#item("* EXTERIOR WALKAROUND", "PERFORM")],
 )
 
+context[#metadata("End of section Tasksharing") #sectionEndLabel]
 }
 
