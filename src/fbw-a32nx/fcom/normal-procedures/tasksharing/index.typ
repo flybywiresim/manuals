@@ -81,5 +81,17 @@ tasksharingtable(
   [], [#item("* EXT PWR pb", "AS RQRD")],
 )
 
+tasksharingtable(
+  "ADIRS:",
+  "CM1", "CM2",
+  [], [#item("All IR MODE selectors", "NAV")],
+)
+
+tasksharingtable(
+  "COCKPIT LIGHTS:",
+  "CM1", "CM2",
+  [#item("* COCKPIT LIGHTS", "AS RQRD")], [#item("* COCKPIT LIGHTS", "AS RQRD")],
+)
+
 }
 
