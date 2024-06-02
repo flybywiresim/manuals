@@ -1,17 +1,5 @@
 #let pagefooter(operatorAbbreviated, aircraft, documentAbbreviated, h1Abbreviated, h2Abbreviated, h3Abbreviated, sectionEnd, dateLastModified) = {
 
-let startsubsection = context(numbering("A", counter("subsection").at(locate(query(selector(<pageheader>).before(here())).last().location())).at(0))).replace("-", "A")
-let endsubsection = context(numbering("A", counter("subsection").at(locate(here())).at(0)))
-let sectionHeadingBoxesOnPage = context(
-    query(
-      selector(<sectionheadingbox>).before(here())
-      ).len()
-    -
-    query(
-      selector(<sectionheadingbox>).before(locate(query(selector(<pageheader>).before(here())).last().location()))
-      ).len()
-  )
-
 pad(bottom: -5pt, line(
   length: 100%,
   stroke: 1pt,
@@ -32,7 +20,14 @@ grid(
     align: left,
     text(documentAbbreviated)
   ),
-  [ #startsubsection - #sectionHeadingBoxesOnPage - #endsubsection],
+  [#context{
+    let startsubsection = numbering("A", counter("subsection").at(locate(query(selector(<pageheader>).before(here())).last().location())).at(0)).replace("-", "A")
+    let endsubsection = numbering("A", counter("subsection").at(locate(here())).at(0))
+    let sectionHeadingBoxesOnPage = query(selector(<sectionheadingbox>).before(here())).len() - query(selector(<sectionheadingbox>).before(locate(query(selector(<pageheader>).before(here())).last().location()))).len()
+
+    startsubsection + " - " + str(sectionHeadingBoxesOnPage) + " - " + endsubsection
+  }
+  ],
   grid.cell(
     align: right,
     text(upper(dateLastModified.display("[day] [month repr:short] [year repr:last_two]")))
