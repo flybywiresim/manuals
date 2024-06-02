@@ -7,15 +7,14 @@
 
 #let sop--safety-exterior-inspection(operatorAbbreviated, aircraft, document, documentAbbreviated, h1, h1Abbreviated, h2, h2Abbreviated, h3, h3Abbreviated) = {
 
-let subsection = counter("subsection")
-subsection.update(0)
-
 set page("us-letter")
 set page(foreground: image("./images/cover_safety_exterior_inspection.png"))
 text[Safety Exterior Inspection]
 
 text[For simulation purposes]
 
+let subsection = counter("subsection")
+subsection.update(0)
 pagebreak()
 set page(
   paper: "a5",
