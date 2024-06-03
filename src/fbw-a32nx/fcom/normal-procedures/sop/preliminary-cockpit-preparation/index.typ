@@ -26,14 +26,15 @@ set page(
 counter(page).update(1)
 
 
-sectionheadingbox[General]; subsection.step()
+sectionheadingbox[General]
 indent[Items marked by asterisks \(\*\) are the only steps to be completed after a transit stop without flight crew change. Otherwise, the new flight crew performs all the items. \ 
 The flight crew performs the preliminary cockpit preparation to ensure that all required safety checks
 are completed. \ 
 The safety checks prevent the inadvertent operation of aircraft systems, danger to the aircraft, and danger to the personnel.
 ]
+subsection.step()
 
-sectionheadingbox[Aircraft Setup]; subsection.step()
+sectionheadingbox[Aircraft Setup]
 indent[
   #smallheading[General]
 
@@ -68,7 +69,7 @@ indent[
 subsection.step()
 
 pagebreak()
-sectionheadingbox[Batteries Check/External Power];
+sectionheadingbox[Batteries Check/External Power]
 indent[
   #squaredot[
     If the aircraft has not been electrically supplied for 6 h or more, perform the following check:
@@ -121,7 +122,7 @@ indent[
 subsection.step()
 
 pagebreak()
-sectionheadingbox[APU Fire Test/APU Start];
+sectionheadingbox[APU Fire Test/APU Start]
 indent[
   #smallheading[RMP]
   #indent[
@@ -145,6 +146,7 @@ indent[
     #item("APU FIRE TEST pb", "PRESS and MAINTAIN", "CM2", true)
   ]
 ]
+subsection.step()
 
 context[#metadata("End of section Preliminary Cockpit Preparation") #sectionEndLabel]
 }

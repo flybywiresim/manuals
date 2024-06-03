@@ -25,7 +25,7 @@ set page(
 
 counter(page).update(1)
 
-sectionheadingbox[SAFETY EXTERIOR INSPECTION]; subsection.step()
+sectionheadingbox[SAFETY EXTERIOR INSPECTION]
 indent[
   #smallheading[GENERAL]
 
@@ -58,6 +58,7 @@ indent[
     ]
   ]
 ]
+subsection.step()
 
 context[#metadata("End of section Safety Exterior Inspection") #sectionEndLabel]
 }

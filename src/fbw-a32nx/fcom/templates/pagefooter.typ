@@ -25,12 +25,22 @@ grid(
     let endSubSection = counter("subsection").at(locate(here())).at(0)
     let sectionHeadingBoxesOnPage = query(selector(<sectionheadingbox>).before(here())).len() - query(selector(<sectionheadingbox>).before(locate(query(selector(<pageheader>).before(here())).last().location()))).len()
 
-    if endSubSection - startSubSection <= 1 {
-      numbering("A", startSubSection).replace("-", "A")
-    } else if endSubSection - startSubSection - sectionHeadingBoxesOnPage > 0 {
-      numbering("A", startSubSection).replace("-", "A") +  " to " + numbering("A", endSubSection - 1)
+    if startSubSection == 0 {
+      if sectionHeadingBoxesOnPage <= 1 {
+        numbering("A", startSubSection).replace("-", "A")
+      } else if endSubSection - startSubSection - sectionHeadingBoxesOnPage == 0 {
+        numbering("A", startSubSection+1).replace("-", "A") +  " to " + numbering("A", endSubSection).replace("-", "A")
+      } else {
+        numbering("A", startSubSection+1).replace("-", "A") +  " to " + numbering("A", endSubSection+1).replace("-", "A")
+      }
     } else {
-      numbering("A", startSubSection).replace("-", "A") +  " to " + numbering("A", endSubSection)
+      if endSubSection - startSubSection <= 1 {
+        numbering("A", startSubSection+1)
+      } else if endSubSection - startSubSection - sectionHeadingBoxesOnPage > 0 {
+        numbering("A", startSubSection+1) +  " to " + numbering("A", endSubSection)
+      } else {
+        numbering("A", startSubSection+1) +  " to " + numbering("A", endSubSection+1)
+      }
     }
   }
   ],
