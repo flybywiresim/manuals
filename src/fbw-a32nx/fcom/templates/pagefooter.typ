@@ -27,11 +27,11 @@ grid(
 
     if startSubSection == 0 {
       if sectionHeadingBoxesOnPage <= 1 {
-        numbering("A", startSubSection).replace("-", "A")
+        numbering("A", startSubSection+1)
       } else if endSubSection - startSubSection - sectionHeadingBoxesOnPage == 0 {
-        numbering("A", startSubSection+1).replace("-", "A") +  " to " + numbering("A", endSubSection).replace("-", "A")
+        numbering("A", startSubSection+1) +  " to " + numbering("A", endSubSection)
       } else {
-        numbering("A", startSubSection+1).replace("-", "A") +  " to " + numbering("A", endSubSection+1).replace("-", "A")
+        numbering("A", startSubSection+1) +  " to " + numbering("A", endSubSection+1)
       }
     } else {
       if endSubSection - startSubSection <= 1 {
