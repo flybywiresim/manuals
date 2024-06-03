@@ -42,7 +42,7 @@ set page(
 let subsection = counter("subsection")
 subsection.update(0)
 
-sectionheadingbox[SAFETY EXTERIOR INSPECTION <PRO-NOR-TSK-A>]; subsection.step()
+sectionheadingbox[SAFETY EXTERIOR INSPECTION <PRO-NOR-TSK-A>]
 
 tasksharingtable(
   "",
@@ -51,8 +51,9 @@ tasksharingtable(
   [], [#item("* L/G DOORS", "CHECK POSITION")],
   [], [#item("* APU AREA", "CHECK")],
 )
+subsection.step()
 
-sectionheadingbox[PRELIMINARY COCKPIT PREPARATION <PRO-NOR-TSK-B>]; subsection.step()
+sectionheadingbox[PRELIMINARY COCKPIT PREPARATION <PRO-NOR-TSK-B>]
 
 tasksharingtable(
   "AIRCRAFT SETUP:",
@@ -171,7 +172,11 @@ tasksharingtable(
   [], [#item("* GEAR PINS", "CHECK ONBOARD/STOWED")],
   [], [#item("* EXTERIOR WALKAROUND", "PERFORM")],
 )
+subsection.step()
 
+sectionheadingbox[COCKPIT PREPARATION]
+
+subsection.step()
 context[#metadata("End of section Tasksharing") #sectionEndLabel]
 }
 
