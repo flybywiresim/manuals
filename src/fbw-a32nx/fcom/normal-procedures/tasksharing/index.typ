@@ -82,7 +82,7 @@ tasksharingtable(
   [], [
     #rounddot([When the APU is AVAIL:], false)
     #linebreak()
-    #item("APU", "START")
+    #item("AIR COND panel", "SET")
     ],
   [], [#item("* EXT PWR pb", "AS RQRD")],
 )
