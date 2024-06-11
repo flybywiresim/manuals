@@ -257,6 +257,30 @@ tasksharingtable(
 )
 subsection.step()
 
+sectionheadingbox[BEFORE PUSHBACK OR START]
+
+tasksharingtable(
+  "BEFORE PUSHBACK/START CLEARANCE:",
+  "PF", "PM",
+  [#item("FINAL LOADSHEET", "CHECK")], [#item("FINAL LOADSHEET", "CHECK")],
+  [#item("FUEL ON BOARD", "CHECK")], [#item("FUEL ON BOARD", "CHECK")],
+  combinedcell[
+    #rounddot([If takeoff conditions changed:], false)
+  ],
+  table.hline(stroke: none),
+  [#item("FINAL T.O PERF DATA", "RECOMPUTE")], [#item("FINAL T.O PERF DATA", "RECOMPUTE")],
+  table.hline(stroke: none),
+  [#item("FMS T.O DATA", "REVISE")], [],
+  [], [#item("FINAL T.O PERF DATA", "CROSSCHECK")],
+  [], [#item("EFB/MCDU GREEN DOT", "COMPARE")],
+  [#item("SEATING POSITION", "ADJUST")], [#item("SEATING POSITION", "ADJUST")],
+  [#item("HUD " + optiontriangle() + " ", "DEPLOY/ADJUST")], [#item("HUD " + optiontriangle() + " ", "DEPLOY/ADJUST")],
+  [#item("FMS PERF TO page", "SELECT")], [#item("FMS F-PLN page", "SELECT")],
+  [], [#item("AIR CONDITIONING UNITS", "CHECK DISCONNECTED")],
+  [], [#item("EXT PWR", "CHECK " + green("AVAIL"))],
+  [], [#item("EXT PWR DISCONNECTION", "REQUEST ")],
+)
+
 context[#metadata("End of section Tasksharing") #sectionEndLabel]
 }
 
