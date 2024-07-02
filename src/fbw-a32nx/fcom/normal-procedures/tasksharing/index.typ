@@ -281,6 +281,103 @@ tasksharingtable(
   [], [#item("EXT PWR DISCONNECTION", "REQUEST ")],
 )
 
+tasksharingtable(
+  "AT PUSHBACK/START CLEARANCE:",
+  "PF", "PM",
+  [], [#item("PUSHBACK/START CLEARANCE", "OBTAIN")],
+  [#item("BEACON sw", "ON")], [],
+  [], [#item("ATC", "SET FOR OPERATIONS")],
+  [#item("WINDOWS/DOORS", "CHECK CLOSED")], [#item("WINDOWS/DOORS", "CHECK CLOSED")],
+  [#item("SLIDES", "CHECK ARMED")], [#item("SLIDES", "CHECK ARMED")],
+  [#item("THRUST LEVERS", "IDLE")], [],
+  [#item("ACCU PRESS", "CHECK")], [],
+  combinedcell[
+    #rounddot([If pushback is not required:], false)
+  ],
+  table.hline(stroke: none),
+  [#item("PARK BRK handle", "ON")], [],
+  table.hline(stroke: none),
+  [#item("BEFORE START C/L", "COMPLETE")], [#item("BEFORE START C/L", "COMPLETE")],
+  combinedcell[
+    #rounddot([If pushback is required:], false)
+  ],
+  table.hline(stroke: none),
+  [#item(green("N/W STEER DISC ") + "MEMO", "ON")], [],
+  table.hline(stroke: none),
+  [#item("BEFORE START C/L", "COMPLETE")], [#item("BEFORE START C/L", "COMPLETE")],
+  table.hline(stroke: none),
+  [#item("PARK BRK handle", "OFF")], [],
+  table.hline(stroke: none),
+  [#indent(rounddot([When pushback is completed:], false))], [],
+  table.hline(stroke: none),
+  [#indent(item("PARK BRK handle", "ON"))], [],
+)
+subsection.step()
+
+sectionheadingbox[ENGINE START]
+
+tasksharingtable(
+  "",
+  "PF", "PM",
+  [#item("THRUST LEVERS", "IDLE")], [],
+  [#item("ENG MODE selector.", "IGN/START")], [],
+  [#item("ENGINE 2 START", "ANNOUNCE")], [],
+  [#item("ENG 2 MASTER LEVER", "ON")], [],
+  [#item("ENG IDLE PARAMETERS", "CHECK")], [],
+  [REPEAT THE START SEQUENCE FOR ENG 1], [],
+)
+subsection.step()
+
+sectionheadingbox[AFTER START]
+
+tasksharingtable(
+  "",
+  "PF", "PM",
+  [#item("ENG MODE selector", "NORM")], [],
+  [#item("APU BLEED pb-sw", "OFF")], [#item("GND SPLRS", "ARM")],
+  [#item("ANTI ICE", "AS RQRD")], [#item("RUD TRIM", "CHECK ZERO")],
+  [], [#item("FLAPS", "SET")],  
+  [#rounddot([If the APU is not required:], false)], [#item("PITCH TRIM", "SET")],
+  table.hline(stroke: none),
+  [#item("APU MASTER SW pb-sw", "OFF")], [],
+  [#item("ECAM STATUS", "CHECK")], [#item("ECAM STATUS", "CHECK")],
+  [#text(size: 8.5pt, item(orange("NW STRG DISC ") + "MEMO", "CHECK NOT DISPLAYED"))], [],
+  [#item("CLEAR TO DISCONNECT", "ANNOUNCE")], [],
+  [#item("AFTER START C/L", "COMPLETE")], [#item("AFTER START C/L", "COMPLETE")],
+)
+subsection.step()
+
+sectionheadingbox[TAXI]
+
+tasksharingtable(
+  "",
+  "PF", "PM",
+  [], [#item("TAXI CLEARANCE", "OBTAIN")],
+  [#item("EXTERIOR LIGHTS", "SET")], [],
+  [#item("PARK BRK handle", "OFF")], [],
+  [#item("BRAKES", "CHECK")], [#item("BRAKE FAN " + optiontriangle() + " pb", "AS RQRD")],
+  [#item("F/CTL", "CHECK")], [#item("F/CTL", "CHECK")],
+  [], [#item("ATC CLEARANCE", "CONFIRM")],
+  [], [#item("FMS F-PLN/SPD", "CHECK")],
+  [], [#item("FCU ALT/HDG", "SET")],
+  [], [#item("BOTH FD", "CHECK ON")],
+  [#item("PFD/ND", "CHECK")], [#item("PFD/ND", "CHECK")],
+  combinedcell([
+    #item("DEPARTURE BRIEFING", "CONFIRM")], center
+  ),
+  [], [#item("AUTO BRK MAX pb-sw", "ON")],
+  [#item("TERR ON ND " + optiontriangle(), "AS RQRD")], [#item("TERR ON ND " + optiontriangle() + " ", "AS RQRD")],
+  [], [#text(size: 8pt, item("ATC CODE/MODE", "CONFIRM/SET FOR TAKEOFF"))],
+  [], [#item("ENG MODE selector", "AS RQRD")],
+  [], [#item("WEATHER RADAR", "ON")],
+  [], [#item("PREDICTIVE WINDSHEAR SYSTEM " + optiontriangle() + " ", "ON")],
+  [], [#item("T.O CONFIG pb", "TEST")],
+  [], [#item("T.O MEMO", "CHECK NO BLUE")],
+  [#item("CABIN REPORT", "RECEIVE")], [#item("CABIN REPORT", "RECEIVE")],
+  [#item("TAXI C/L", "COMPLETE")], [#item("TAXI C/L", "COMPLETE")],
+)
+subsection.step()
+
 context[#metadata("End of section Tasksharing") #sectionEndLabel]
 }
 
