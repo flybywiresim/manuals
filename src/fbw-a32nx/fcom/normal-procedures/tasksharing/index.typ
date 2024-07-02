@@ -378,6 +378,148 @@ tasksharingtable(
 )
 subsection.step()
 
+sectionheadingbox[DEPARTURE CHANGE]
+
+tasksharingtable(
+  "",
+  "PF", "PM",
+  [#item("FINAL T.O PERF DATA", "RECOMPUTE")], [#item("FINAL T.O PERF DATA", "RECOMPUTE")],
+  [], [#item("FINAL T.O. DATA", "REVISE")],
+  [#item("FMS REVISED T.O PERF DATA", "CROSSCHECK")], [],
+  [#item("EFB/MCDU GREEN DOT", "COMPARE")], [],
+  [], [#item("FLAPS lever", "AS APPROPRIATE")],
+  [], [#item("FMS F-PLN/SPD", "CHECK")],
+  [#item("EFB/MCDU GREEN DOT", "COMPARE")], [],
+  combinedcell([
+    #item("RE-BRIEFING", "COMPLETE")], center
+  ),
+  [#item("DEPARTURE CHANGE C/L", "COMPLETE")], [#item("DEPARTURE CHANGE C/L", "COMPLETE")],
+)
+subsection.step()
+
+sectionheadingbox[BEFORE TAKEOFF]
+
+tasksharingtable(
+  "",
+  "PF", "PM",
+  [], [#rounddot("If the brake fans " + optiontriangle() + " are set to ON and the temperature of all brakes is below 150°C:", false)],
+  table.hline(stroke: none),
+  [], [#item("BRAKE FAN pb", "OFF")],
+  [], [#item("LINE-UP CLEARANCE", "OBTAIN")],
+  [], [#item("TCAS", "TA ONLY or TA/RA")],
+  [#item("TAKEOFF RUNWAY", "CONFIRM")], [#item("TAKEOFF RUNWAY", "CONFIRM")],
+  [#item("APPROACH PATH", "CLEAR OF TRAFFIC")], [#item("APPROACH PATH", "CLEAR OF TRAFFIC")],
+  [#item("EXTERIOR LIGHTS", "SET")], [#item("PACK 1 and 2", "AS RQRD")],
+  [#item("SLIDING TABLE", "STOW")], [#item("SLIDING TABLE", "STOW")],
+  [#item("All EFB TRANSMITTING MODE", "AS RQRD")], [#item("ALL EFB TRANSMITTING MODE", "AS RQRD")],
+  [#item("All EFB (with no mounted equipment)", "STOW")], [#item("ALL EFB (with no mounted equipment)", "STOW")],
+  [#item("THRUST BUMP " + optiontriangle() + " ", "AS RQRD")], [],
+  [], [#item("CABIN CREW", "ADVISE")],
+  [#item("LINE UP C/L", "COMPLETE")], [#item("LINE UP C/L", "COMPLETE")],
+
+)
+subsection.step()
+
+sectionheadingbox[TAKEOFF]
+
+tasksharingtable(
+  "",
+  "PF", "PM",
+  [], [#item("TAKEOFF CLEARANCE", "OBTAIN")],
+  [#item("EXTERIOR LIGHTS", "SET")], [],
+  [#item("TAKEOFF", "ANNOUNCE")], [],
+  [#item("THRUST", "50% N1 (1.05 EPR)")], [],
+  [#item("SIDESTICK", "AS RQRD")], [],
+  [#item("BRAKES", "RELEASE")], [],
+  [#item("THRUST LEVERS", "FLX OR TOGA")], [#item("CHRONO", "START")],
+  combinedcell([
+    #text(weight: "bold", "The captain places hand on thrust levers until V1")], center
+  ),
+  [#item("DIRECTIONAL CONTROL", "USE RUDDER")], [],
+  [], [#item("PFD/ND", "MONITOR")],
+  combinedcell[
+    #rounddot("Below 80 kt:", false)
+  ],
+  table.hline(stroke: none),
+  [], [
+    #item("TAKEOFF THRUST", "SET")
+    #item("THRUST SET", "ANNOUNCE")
+    #item("PFD and ENG indications", "MONITOR")
+    ],
+  combinedcell[
+    #rounddot("At 80 kt:", false)
+  ],
+  table.hline(stroke: none),
+  [#item("SIDESTICK", "RELEASE")], [],
+  combinedcell[
+    #rounddot("At 100 kt:", false)
+  ],
+  table.hline(stroke: none),
+  [#item("100 kt", "CROSSCHECK")], [#item("ONE HUNDRED KNOTS", "ANNOUNCE")],
+  combinedcell[
+    #rounddot("At V1:", false)
+  ],
+  table.hline(stroke: none),
+  [], [#item("V1", "MONITOR or ANNOUNCE")],
+  combinedcell[
+    #rounddot("At VR:", false)
+  ],
+  table.hline(stroke: none),
+  [#item("ROTATION", "PERFORM")], [#item("ROTATION", "ORDER")],
+  combinedcell[
+    #rounddot("When positive climb:", false)
+  ],
+  table.hline(stroke: none),
+  [], [#item("POSITIVE CLIMB", "ANNOUNCE")],
+  table.hline(stroke: none),
+  [#item("L/G UP", "ORDER")], [#item("L/G lever", "SELECT UP")],
+  table.hline(stroke: none),
+  [#item("AP", "AS RQRD")], [],
+  combinedcell[
+    #rounddot("At the thrust reduction altitude:", false)
+  ],
+  table.hline(stroke: none),
+  [#item("THRUST LEVERS", "CL")], [#item("PACK 1 and 2 (if applicable)", "ON")],
+  combinedcell[
+    #rounddot("At F speed:", false)
+  ],
+  table.hline(stroke: none),
+  [#item("FLAPS 1", "ORDER")], [#item("FLAPS 1", "SELECT")],
+  combinedcell[
+    #rounddot("At S speed:", false)
+  ],
+  table.hline(stroke: none),
+  [#item("FLAPS 0", "ORDER")], [#item("FLAPS 0", "SELECT")],
+  table.hline(stroke: none),
+  [], [
+    #item("GND SPOILERS", "DISARM")
+    #item("L/G", "CHECK UP")
+    #item("EXTERIOR LIGHT", "SET")],
+)
+subsection.step()
+
+sectionheadingbox[AFTER TAKEOFF]
+
+tasksharingtable(
+  "",
+  "PF", "PM",
+  [], [
+    #rounddot("If the APU was used to supply the air conditioning during takeoff:", false)
+    #linebreak()
+    #item("APU BLEED pb-sw", "OFF")
+    #item("APU MASTER SW pb-sw", "OFF")
+  ],
+  [], [#item("ENG MODE selector", "AS RQRD")],
+  [], [
+    #rounddot("If the takeoff was performed with TA ONLY:", false)
+    #linebreak()
+    #item("TCAS", "TA/RA")
+    ],
+  [], [#item("ANTI ICE", "AS RQRD")],
+
+)
+subsection.step()
+
 context[#metadata("End of section Tasksharing") #sectionEndLabel]
 }
 
