@@ -520,6 +520,49 @@ tasksharingtable(
 )
 subsection.step()
 
+sectionheadingbox[CLIMB]
+
+tasksharingtable(
+  "",
+  "PF", "PM",
+  [#item("MCDU", "PERF CLB")], [#item("MCDU", "F-PLN")],
+  combinedcell[
+    #rounddot("At transition altitude", false)
+  ],
+  table.hline(stroke: none),
+  [#text(size: 8pt, item("BAROMETRIC REFERENCE", "SET STD/CROSSCHECK"))], [#text(size: 8pt, item("BAROMETRIC REFERENCE", "SET STD/CROSSCHECK"))],
+  [#item("WEATHER RADAR", "ADJUST AS APPROPRIATE")], [#item("ENG ANTI ICE pb-sw", "AS RQRD")],
+  combinedcell[
+    #rounddot("At 10 000 ft AAL", false)
+  ],
+  table.hline(stroke: none),
+  [], [#item("LAND sw", "RETRACT")],
+  [], [#item("SEAT BELTS sw", "AS RQRD")],
+  [#item("EFIS OPTIONS", "AS RQRD")], [#item("EFIS OPTIONS", "AS RQRD")],
+  [], [#item("ECAM MEMO", "REVIEW")],
+  [], [#item("NAVAIDS", "CLEAR")],
+  [], [#item("SEC F-PLN", "AS RQRD")],
+  [], [#item("OPT FL/REC MAX FL", "CHECK")],
+)
+subsection.step()
+
+sectionheadingbox[CRUISE]
+
+tasksharingtable(
+  "",
+  "PF", "PM",
+  [#item("ECAM MEMO/SD PAGES", "REVIEW")], [#item("ECAM MEMO/SD PAGES", "REVIEW")],
+  [#item("FLIGHT PROGRESS", "CHECK")], [#item("FLIGHT PROGRESS", "CHECK")],
+  [#item("FUEL", "MONITOR")], [#item("FUEL", "MONITOR")],
+  combinedcell[
+    #rounddot("If " + orange("GPS PRIMARY LOST") + ":", false)
+  ],
+  table.hline(stroke: none),
+  [#item("NAVIGATION ACCURACY", "MONITOR")], [#item("NAVIGATION ACCURACY", "MONITOR")],
+  [#item("RADAR", "ADJUST AS APPROPRIATE")], [],
+)
+subsection.step()
+
 context[#metadata("End of section Tasksharing") #sectionEndLabel]
 }
 
