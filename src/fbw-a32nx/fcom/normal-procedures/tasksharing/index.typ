@@ -341,7 +341,7 @@ tasksharingtable(
   table.hline(stroke: none),
   [#item("APU MASTER SW pb-sw", "OFF")], [],
   [#item("ECAM STATUS", "CHECK")], [#item("ECAM STATUS", "CHECK")],
-  [#text(size: 8.5pt, item(orange("NW STRG DISC ") + "MEMO", "CHECK NOT DISPLAYED"))], [],
+  [#text(size: 8.5pt, item(amber("NW STRG DISC ") + "MEMO", "CHECK NOT DISPLAYED"))], [],
   [#item("CLEAR TO DISCONNECT", "ANNOUNCE")], [],
   [#item("AFTER START C/L", "COMPLETE")], [#item("AFTER START C/L", "COMPLETE")],
 )
@@ -555,7 +555,7 @@ tasksharingtable(
   [#item("FLIGHT PROGRESS", "CHECK")], [#item("FLIGHT PROGRESS", "CHECK")],
   [#item("FUEL", "MONITOR")], [#item("FUEL", "MONITOR")],
   combinedcell[
-    #rounddot("If " + orange("GPS PRIMARY LOST") + ":", false)
+    #rounddot("If " + amber("GPS PRIMARY LOST") + ":", false)
   ],
   table.hline(stroke: none),
   [#item("NAVIGATION ACCURACY", "MONITOR")], [#item("NAVIGATION ACCURACY", "MONITOR")],
