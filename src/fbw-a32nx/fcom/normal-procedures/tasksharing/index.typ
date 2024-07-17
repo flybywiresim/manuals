@@ -596,6 +596,39 @@ tasksharingtable(
 )
 subsection.step()
 
+sectionheadingbox[DESCENT]
+
+tasksharingtable(
+  "",
+  "PF", "PM",
+  [#item("DESCENT", "INITIATE")], [],
+  [#item("MCDU", "PROG/PERF DESCENT")], [#item("MCDU", "F-PLN")],
+  [#item("DESCENT", "MONITOR/ADJUST")], [],
+  [#item("TERR ON ND", "AS RQRD")], [#item("TERR ON ND", "AS RQRD")],
+  combinedcell[
+    #rounddot("When the aircraft approaches the transition level, and when cleared for an altitude:", false)
+  ],
+  table.hline(stroke: none),
+  [#text(size: 8.5pt, item("BAROMETRIC REFERENCE", "SET/CROSSCHECK"))], [#text(size: 8.5pt, item("BAROMETRIC REFERENCE", "SET/CROSSCHECK"))],
+  combinedcell[
+    #rounddot("At 10 000 ft AAL:", false)
+  ],
+  table.hline(stroke: none),
+  [], [#item("LAND sw", "ON")],
+  [], [#item("SEAT BELTS sw", "ON")],
+  [#item("EFIS option pb", "CSTR")], [#item("EFIS option pb", "CSTR")],
+  [#item("LS pb", "AS RQRD")], [#item("LS pb", "AS RQRD")],
+  [#item("NAVAIDS", "AS RQRD/CHECK")], [#item("ENG MODE selector", "AS RQRD")],
+  combinedcell[
+    #rounddot("If " + amber("GPS PRIMARY LOST") + ":", false)
+  ],
+  table.hline(stroke: none),
+  [#item("NAVIGATION ACCURACY", "MONITOR")], [],
+  [#item("APPROACH C/L", "COMPLETE")], [#item("APPROACH C/L", "COMPLETE")],
+
+)
+subsection.step()
+
 context[#metadata("End of section Tasksharing") #sectionEndLabel]
 }
 
