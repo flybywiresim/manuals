@@ -563,6 +563,39 @@ tasksharingtable(
 )
 subsection.step()
 
+sectionheadingbox[DESCENT PREPARATION]
+
+tasksharingtable(
+  "",
+  "PF", "PM",
+  [], [#text(size: 8pt, item("WEATHER AND LANDING INFORMATION", "OBTAIN"))],
+  combinedcell([
+    #item("NAV CHARTS CLIPBOARD", "PREPARE")
+  ], center),
+  [], [#item("STATUS page", "CHECK")],
+  [#item("LANDING CONDITIONS", "CONFIRM")], [#item("LANDING CONDITIONS", "CONFIRM")],
+  combinedcell[
+    #rounddot("If landing conditions changed:", false)
+  ],
+  table.hline(stroke: none),
+  [#item("LANDING PERF DATA", "COMPUTE")], [#item("LANDING PERF DATA", "COMPUTE")],
+  combinedcell([
+    #item("LADING PERF DATA", "CROSSCHECK")
+  ], center),
+  [#item("FMS", "PREPARE")], [#item("FMS PREPARATION", "CROSSCHECK")],
+  [#item("GPWS LDG FLAP 3", "AS RQRD")], [],
+  [#item("LDG ELEV", "CHECK")], [],
+  [#item("AUTO BRK", "AS RQRD")], [],
+  combinedcell([
+    #item("ARRIVAL BRIEFING", "PERFORM")
+  ], center),
+  [#item("RADAR", "ADJUST AS APPROPRIATE")], [],
+  [], [#item("ANTI ICE pb-sw", "AS RQRD")],
+  [], [#item("DESCENT CLEARANCE", "OBTAIN")],
+  [#item("CLEARED ALTITUDE ON FCU", "SET")], [],
+)
+subsection.step()
+
 context[#metadata("End of section Tasksharing") #sectionEndLabel]
 }
 
