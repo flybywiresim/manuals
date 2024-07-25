@@ -13,7 +13,7 @@
     style(styles => {
       text(item)
       box(width: 1fr, repeat[.])
-      text(upper(state))
+      text(state)
       if lastitem == false {
         box(move(dy: 6pt, scale(y: 300%, pad(left: 5pt, right: 0pt, line(stroke: 1pt + black, length: measure(item, styles).height, angle: 90deg)))))
       } else {
@@ -29,7 +29,7 @@
     style(styles => {
       text(item)
       box(width: 1fr, repeat[.])
-      text(upper(state))
+      text(state)
       linebreak()
     })
   }

@@ -39,6 +39,22 @@ set page(
   numbering: "1 / 1"
 )
 
+show ref: it => {
+  let fi = figure
+  let el = it.element
+  if el != none and el.func() == fi {
+    // Override figure references.
+    numbering(
+      el.numbering,
+      ..counter(fi).at(el.location())
+    )
+  } else {
+    // Other references as usual.
+    it
+  }
+}
+set figure(numbering: "(1)")
+
 let subsection = counter("subsection")
 subsection.update(0)
 
@@ -56,7 +72,7 @@ subsection.step()
 sectionheadingbox[PRELIMINARY COCKPIT PREPARATION <PRO-NOR-TSK-B>]
 
 tasksharingtable(
-  "AIRCRAFT SETUP:",
+  "AIRCRAFT SETUP:", false,
   "CM1", "CM2",
   [], [#item("ENG 1, 2 MASTER LEVERS", "OFF")],
   [], [#item("ENG MODE selector", "NORM")],
@@ -67,14 +83,14 @@ tasksharingtable(
 )
 
 tasksharingtable(
-  "BATTERIES/EXTERNAL POWER:",
+  "BATTERIES/EXTERNAL POWER:", false,
   "CM1", "CM2",
   [], [#item("BAT", "CHECK/AUTO")],
   [], [#item("EXT PWR pb", "ON")],
 )
 
 tasksharingtable(
-  "APU FIRE TEST/APU START:",
+  "APU FIRE TEST/APU START:", false,
   "CM1", "CM2",
   [], [#item("RMP", "CHECK ON/SET")],
   [], [#item("APU FIRE TEST", "PERFORM")],
@@ -88,19 +104,19 @@ tasksharingtable(
 )
 
 tasksharingtable(
-  "ADIRS:",
+  "ADIRS:", false,
   "CM1", "CM2",
   [], [#item("All IR MODE selectors", "NAV")],
 )
 
 tasksharingtable(
-  "COCKPIT LIGHTS:",
+  "COCKPIT LIGHTS:", false,
   "CM1", "CM2",
   [#item("* COCKPIT LIGHTS", "AS RQRD")], [#item("* COCKPIT LIGHTS", "AS RQRD")],
 )
 
 tasksharingtable(
-  "EFB INITIALIZATION:",
+  "EFB INITIALIZATION:", false,
   "CM1", "CM2",
   [#item("All EFB", "START")], [#item("All EFB", "START")],
   [#item("EFB/eQRH Version", "CHECK")], [#item("EFB/eQRH Version", "CHECK")],
@@ -123,7 +139,7 @@ tasksharingtable(
 )
 
 tasksharingtable(
-  "AIRCRAFT ACCEPTANCE:",
+  "AIRCRAFT ACCEPTANCE:", false,
   "CM1", "CM2",
   [#item("* RCL pb", "PRESS 3 s")], [],
   combinedcell([
@@ -139,7 +155,7 @@ tasksharingtable(
 )
 
 tasksharingtable(
-  "PRELIMINARY PERFORMANCE DETERMINATION:",
+  "PRELIMINARY PERFORMANCE DETERMINATION:", false,
   "CM1", "CM2",
   [#item("* AIRFIELD DATA", "OBTAIN")], [#item("* AIRFIELD DATA", "OBTAIN")],
   combinedcell[
@@ -158,7 +174,7 @@ tasksharingtable(
 )
 
 tasksharingtable(
-  "BEFORE WALKAROUND:",
+  "BEFORE WALKAROUND:", false,
   "PF", "PM",
   [], [#text(size: 7.5pt, item("* ECAM OXY PRESS/HYD QTY/ENG OIL QTY", "CHECK"))],
   [], [#item("FLAPS", "CHECK POSITION")],
@@ -177,7 +193,7 @@ subsection.step()
 sectionheadingbox[COCKPIT PREPARATION]
 
 tasksharingtable(
-  "OVERHEAD PANEL:",
+  "OVERHEAD PANEL:", false,
   "PF", "PM",
   [
     #text(size: 8pt, "As a general rule, during the scan sequence:")
@@ -201,7 +217,7 @@ tasksharingtable(
 )
 
 tasksharingtable(
-  "CTR INSTRUMENT PANEL:",
+  "CTR INSTRUMENT PANEL:", false,
   "PF", "PM",
   [#item("* ISIS/STBY INSTRUMENTS", "CHECK")], [],
   [#item("* CLOCK", "CHECK/SET")], [],
@@ -209,7 +225,7 @@ tasksharingtable(
 )
 
 tasksharingtable(
-  "PEDESTAL:",
+  "PEDESTAL:", false,
   "PF", "PM",
   [#item("ACP", "CHECK ON/SET")], [],
   [#item("* COCKPIT DOOR sw", "NORM")], [],
@@ -229,7 +245,7 @@ tasksharingtable(
 )
 
 tasksharingtable(
-  "GLARESHIELD:",
+  "GLARESHIELD:", false,
   "PF", "PM",
   combinedcell[#rounddot([When both flight crewmembers are seated:],false)],
   [#item("* BAROMETRIC REFERENCE", "SET/CROSSCHECK")], [#item("* BAROMETRIC REFERENCE", "SET/CROSSCHECK")],
@@ -241,7 +257,7 @@ tasksharingtable(
 )
 
 tasksharingtable(
-  "LATERAL CONSOLE AND PF/PM INSTRUMENT PANELS:",
+  "LATERAL CONSOLE AND PF/PM INSTRUMENT PANELS:", false,
   "PF", "PM",
   combinedcell[#rounddot([When both flight crewmembers are seated:],false)],
   [#item("OXYGEN MASK", "TEST")], [#item("OXYGEN MASK", "TEST")],
@@ -260,7 +276,7 @@ subsection.step()
 sectionheadingbox[BEFORE PUSHBACK OR START]
 
 tasksharingtable(
-  "BEFORE PUSHBACK/START CLEARANCE:",
+  "BEFORE PUSHBACK/START CLEARANCE:", false,
   "PF", "PM",
   [#item("FINAL LOADSHEET", "CHECK")], [#item("FINAL LOADSHEET", "CHECK")],
   [#item("FUEL ON BOARD", "CHECK")], [#item("FUEL ON BOARD", "CHECK")],
@@ -277,12 +293,12 @@ tasksharingtable(
   [#item("HUD " + optiontriangle() + " ", "DEPLOY/ADJUST")], [#item("HUD " + optiontriangle() + " ", "DEPLOY/ADJUST")],
   [#item("FMS PERF TO page", "SELECT")], [#item("FMS F-PLN page", "SELECT")],
   [], [#item("AIR CONDITIONING UNITS", "CHECK DISCONNECTED")],
-  [], [#item("EXT PWR", "CHECK " + green("AVAIL"))],
+  [], [#item("EXT PWR", "CHECK " + textgreen("AVAIL"))],
   [], [#item("EXT PWR DISCONNECTION", "REQUEST ")],
 )
 
 tasksharingtable(
-  "AT PUSHBACK/START CLEARANCE:",
+  "AT PUSHBACK/START CLEARANCE:", false,
   "PF", "PM",
   [], [#item("PUSHBACK/START CLEARANCE", "OBTAIN")],
   [#item("BEACON sw", "ON")], [],
@@ -302,7 +318,7 @@ tasksharingtable(
     #rounddot([If pushback is required:], false)
   ],
   table.hline(stroke: none),
-  [#item(green("N/W STEER DISC ") + "MEMO", "ON")], [],
+  [#item(textgreen("N/W STEER DISC ") + "MEMO", "ON")], [],
   table.hline(stroke: none),
   [#item("BEFORE START C/L", "COMPLETE")], [#item("BEFORE START C/L", "COMPLETE")],
   table.hline(stroke: none),
@@ -317,7 +333,7 @@ subsection.step()
 sectionheadingbox[ENGINE START]
 
 tasksharingtable(
-  "",
+  "", false,
   "PF", "PM",
   [#item("THRUST LEVERS", "IDLE")], [],
   [#item("ENG MODE selector.", "IGN/START")], [],
@@ -331,7 +347,7 @@ subsection.step()
 sectionheadingbox[AFTER START]
 
 tasksharingtable(
-  "",
+  "", false,
   "PF", "PM",
   [#item("ENG MODE selector", "NORM")], [],
   [#item("APU BLEED pb-sw", "OFF")], [#item("GND SPLRS", "ARM")],
@@ -341,7 +357,7 @@ tasksharingtable(
   table.hline(stroke: none),
   [#item("APU MASTER SW pb-sw", "OFF")], [],
   [#item("ECAM STATUS", "CHECK")], [#item("ECAM STATUS", "CHECK")],
-  [#text(size: 8.5pt, item(amber("NW STRG DISC ") + "MEMO", "CHECK NOT DISPLAYED"))], [],
+  [#text(size: 8.5pt, item(textamber("NW STRG DISC ") + "MEMO", "CHECK NOT DISPLAYED"))], [],
   [#item("CLEAR TO DISCONNECT", "ANNOUNCE")], [],
   [#item("AFTER START C/L", "COMPLETE")], [#item("AFTER START C/L", "COMPLETE")],
 )
@@ -350,7 +366,7 @@ subsection.step()
 sectionheadingbox[TAXI]
 
 tasksharingtable(
-  "",
+  "", false,
   "PF", "PM",
   [], [#item("TAXI CLEARANCE", "OBTAIN")],
   [#item("EXTERIOR LIGHTS", "SET")], [],
@@ -381,7 +397,7 @@ subsection.step()
 sectionheadingbox[DEPARTURE CHANGE]
 
 tasksharingtable(
-  "",
+  "", false,
   "PF", "PM",
   [#item("FINAL T.O PERF DATA", "RECOMPUTE")], [#item("FINAL T.O PERF DATA", "RECOMPUTE")],
   [], [#item("FINAL T.O. DATA", "REVISE")],
@@ -400,7 +416,7 @@ subsection.step()
 sectionheadingbox[BEFORE TAKEOFF]
 
 tasksharingtable(
-  "",
+  "", false,
   "PF", "PM",
   [], [#rounddot("If the brake fans " + optiontriangle() + " are set to ON and the temperature of all brakes is below 150°C:", false)],
   table.hline(stroke: none),
@@ -423,7 +439,7 @@ subsection.step()
 sectionheadingbox[TAKEOFF]
 
 tasksharingtable(
-  "",
+  "", false,
   "PF", "PM",
   [], [#item("TAKEOFF CLEARANCE", "OBTAIN")],
   [#item("EXTERIOR LIGHTS", "SET")], [],
@@ -501,7 +517,7 @@ subsection.step()
 sectionheadingbox[AFTER TAKEOFF]
 
 tasksharingtable(
-  "",
+  "", false,
   "PF", "PM",
   [], [
     #rounddot("If the APU was used to supply the air conditioning during takeoff:", false)
@@ -523,7 +539,7 @@ subsection.step()
 sectionheadingbox[CLIMB]
 
 tasksharingtable(
-  "",
+  "", false,
   "PF", "PM",
   [#item("MCDU", "PERF CLB")], [#item("MCDU", "F-PLN")],
   combinedcell[
@@ -549,13 +565,13 @@ subsection.step()
 sectionheadingbox[CRUISE]
 
 tasksharingtable(
-  "",
+  "", false,
   "PF", "PM",
   [#item("ECAM MEMO/SD PAGES", "REVIEW")], [#item("ECAM MEMO/SD PAGES", "REVIEW")],
   [#item("FLIGHT PROGRESS", "CHECK")], [#item("FLIGHT PROGRESS", "CHECK")],
   [#item("FUEL", "MONITOR")], [#item("FUEL", "MONITOR")],
   combinedcell[
-    #rounddot("If " + amber("GPS PRIMARY LOST") + ":", false)
+    #rounddot("If " + textamber("GPS PRIMARY LOST") + ":", false)
   ],
   table.hline(stroke: none),
   [#item("NAVIGATION ACCURACY", "MONITOR")], [#item("NAVIGATION ACCURACY", "MONITOR")],
@@ -566,7 +582,7 @@ subsection.step()
 sectionheadingbox[DESCENT PREPARATION]
 
 tasksharingtable(
-  "",
+  "", false,
   "PF", "PM",
   [], [#text(size: 8pt, item("WEATHER AND LANDING INFORMATION", "OBTAIN"))],
   combinedcell([
@@ -599,7 +615,7 @@ subsection.step()
 sectionheadingbox[DESCENT]
 
 tasksharingtable(
-  "",
+  "", false,
   "PF", "PM",
   [#item("DESCENT", "INITIATE")], [],
   [#item("MCDU", "PROG/PERF DESCENT")], [#item("MCDU", "F-PLN")],
@@ -620,13 +636,35 @@ tasksharingtable(
   [#item("LS pb", "AS RQRD")], [#item("LS pb", "AS RQRD")],
   [#item("NAVAIDS", "AS RQRD/CHECK")], [#item("ENG MODE selector", "AS RQRD")],
   combinedcell[
-    #rounddot("If " + amber("GPS PRIMARY LOST") + ":", false)
+    #rounddot("If " + textamber("GPS PRIMARY LOST") + ":", false)
   ],
   table.hline(stroke: none),
   [#item("NAVIGATION ACCURACY", "MONITOR")], [],
   [#item("APPROACH C/L", "COMPLETE")], [#item("APPROACH C/L", "COMPLETE")],
 
 )
+subsection.step()
+
+sectionheadingbox[APPROACH]
+
+tasksharingtable(
+  "AIRCRAFT CONFIGURATION FOR APPROACH", true,
+  "PF", "PM",
+  combinedcell[
+    #underline("INTIATIAL APPROACH:")
+  ],
+  [#item("F-PLN SEQUENCING", "ADJUST")], [],
+  combinedcell[
+    #rounddot("Approx 15 NM from touchdown:", false)
+  ],
+  table.hline(stroke: none),
+  combinedcell([
+      #item("APPROACH PHASE", [CHECK/ACTIVATE or set green dot #super[@apprConf1]])
+  ], center),
+  [#item("MANAGED SPEED", "SET")], [],
+)
+note("apprConf1", "PF if AP is ON, PM if AP is OFF. The PF may request that this action is performed by the PM depending on the situation.")
+
 subsection.step()
 
 context[#metadata("End of section Tasksharing") #sectionEndLabel]

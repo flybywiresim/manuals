@@ -113,7 +113,7 @@ indent[
   #indent[
     #item("BAT 1 pb-sw and BAT 2 pb-sw.", "AUTO", "CM2", true)
 
-    #rounddot[If the #green[AVAIL] light is on:]
+    #rounddot[If the #textgreen[AVAIL] light is on:]
     #indent[
       #item("EXT PWR pb-sw", "ON", "CM2", true)
     ]

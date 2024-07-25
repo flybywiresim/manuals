@@ -11,9 +11,10 @@
 #import "./../templates/L2.typ": *
 #import "./../templates/L3.typ": *
 #import "./../templates/italic.typ": *
-#import "./../templates/red.typ": *
-#import "./../templates/amber.typ": *
-#import "./../templates/green.typ": *
+#import "./../templates/textred.typ": *
+#import "./../templates/textamber.typ": *
+#import "./../templates/textgreen.typ": *
 #import "./../templates/tasksharingtable.typ": *
 #import "./../templates/combinedcell.typ": *
 #import "./../templates/optiontriangle.typ": *
+#import "./../templates/note.typ": *
