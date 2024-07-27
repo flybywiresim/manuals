@@ -651,7 +651,7 @@ tasksharingtable(
   "AIRCRAFT CONFIGURATION FOR APPROACH", true,
   "PF", "PM",
   combinedcell[
-    #underline("INTIATIAL APPROACH:")
+    #underline("INITIAL APPROACH:")
   ],
   [#item("F-PLN SEQUENCING", "ADJUST")], [],
   combinedcell[
