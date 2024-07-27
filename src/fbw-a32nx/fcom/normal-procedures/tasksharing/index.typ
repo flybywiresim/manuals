@@ -662,6 +662,60 @@ tasksharingtable(
       #item("APPROACH PHASE", [CHECK/ACTIVATE or set green dot #super[@apprConf1]])
   ], center),
   [#item("MANAGED SPEED", "SET")], [],
+  [#item("FLIGHT PATH", "MONITOR")], [#item("NAV ACCURACY", "MONITOR")],
+  [#item("SPEED BRAKES lever", "AS REQUIRED")], [],
+  [#item("RADAR", "ADJUST AS APPROPRIATE")], [],
+  combinedcell[
+    #underline("INTERMEDIATE/FINAL APPROACH:")
+  ],
+  combinedcell[
+    #rounddot("At green dot:", false)
+  ],
+  table.hline(stroke: none),
+  [#item("FLAPS 1", "ORDER")], [#item("FLAPS 1", "SELECT")],
+  [], [#item("TCAS", "TA ONLY or TA/RA")],
+  combinedcell([
+      #item("S SPEED", [CHECK or SET #super[@apprConf1]])
+  ], center),
+  combinedcell[
+    #rounddot("At 2000ft AGL minimum:", false)
+  ],
+  table.hline(stroke: none),
+  [#item("FLAPS 2", "ORDER")], [#item("FLAPS 2", "SELECT")],
+  combinedcell([
+      #item("F SPEED", [CHECK or SET #super[@apprConf1]])
+  ], center),
+  combinedcell[
+    #rounddot("When FLAPS 2:", false)
+  ],
+  table.hline(stroke: none),
+  [#item("L/G DOWN", "ORDER")], [#item("L/G lever", "SELECT DOWN")],
+  [], [#item("AUTO BRAKE", "CONFIRM")],
+  [], [#item("GND SPLRS", "ARM")],
+  [], [#item("EXTERIOR LIGHTS", "SET")],
+  combinedcell[
+    #rounddot("When L/G down:", false)
+  ],
+  table.hline(stroke: none),
+  [#item("FLAPS 3", "ORDER")], [#item("FLAPS 3", "SELECT")],
+  [], [#item("ECAM WHEEL PAGE", "CHECK")],
+  combinedcell[
+    #rounddot("When FLAPS 3:", false)
+  ],
+  table.hline(stroke: none),
+  [#item("FLAPS FULL", "ORDER")], [#item("FLAPS FULL", "SELECT")],
+  combinedcell([
+      #item("SPEED TARGET", [CHECK or SET #super[@apprConf1]])
+  ], center),
+  [], [#item("A/THR", "CHECK IN SPEED MODE or OFF")],
+  [], [#item("WING A.ICE (if not required)", "OFF")],
+  [#item("SLIDING TABLE", "STOW")], [#item("SLIDING TABLE", "STOW")],
+  [#item("All EFB (with no mounted equipment)", "STOW")], [#item("All EFB (with no mounted equipment)", "STOW")],
+  [], [#item("LDG MEMO", "CHECK NO BLUE")],
+  [#item("CABIN REPORT", "RECEIVE")], [#item("CABIN REPORT", "RECEIVE")],
+  [#item("LANDING C/L", "COMPLETE")], [#item("LANDING C/L", "COMPLETE")],
+  [], [#item("CABIN CREW", "ADVISE")],
+  [], [#item("FLIGHT PARAMETERS", "MONITOR")],
 )
 note("apprConf1", "PF if AP is ON, PM if AP is OFF. The PF may request that this action is performed by the PM depending on the situation.")
 
