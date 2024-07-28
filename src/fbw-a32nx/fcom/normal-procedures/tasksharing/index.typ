@@ -783,6 +783,56 @@ tasksharingtable(
 counter(figure).update(0)
 note("locGs1", "PF if AP is ON, PM if AP is OFF. The PF may request that this action is performed by the PM depending on the situation.")
 
+tasksharingtable(
+  "APPROACH USING FPA GUIDANCE", true,
+  "PF", "PM",
+  combinedcell[
+    #underline("DESCENT PREPARATION:")
+  ],
+  [#item("F-PLN A Page", "CHECK")], [#item("F-PLN A Page", "CHECK")],
+  [#item("PROG Page", "COMPLETE")], [#item("PROG Page", "COMPLETE")],
+  [#item("GO-AROUND STRATEGY", "REVIEW")], [],
+  combinedcell[#underline("DESCENT:")],
+  combinedcell[#rounddot("At 10 000 ft AAL", false)],
+  table.hline(stroke: none),
+  [#item("NAV ACCURACY", "CHECK")], [],
+  combinedcell[#rounddot("For RNAV(GNSS):", false)],
+  table.hline(stroke: none),
+  [#indent(item("GPS PRIMARY", "CHECK"))],[],
+  combinedcell[
+    #underline("INITIAL/INTERMEDIATE/FINAL APPROACH:")
+  ],
+  [#text(size: 8pt, item("LATERAL GUIDANCE MODE", "SET FOR APPROACH"))], [],
+  combinedcell[#rounddot("For LOC ONLY and ILS G/S OUT:", false)],
+  table.hline(stroke: none),
+  [#indent(item("LOC pb-sw", "PRESS"))],[],
+  [#indent(item("LOC", "CHECK ARMED"))],[],
+  combinedcell[#rounddot("For back course localizer approaches:", false)],
+  table.hline(stroke: none),
+  [#indent(item("TRK FPA MODE", "USE FOR APPROACH"))],[],
+  [#item("LATERAL path", "INTERCEPT")], [],
+  [#item("TRK FPA (Bird)", "SELECT")], [],
+  [#item("FPA FOR FINAL APPROACH", "SET")], [],
+  combinedcell[#rounddot("At 0.3 NM from the Final Descent Point", false)],
+  table.hline(stroke: none),
+  [#item("FPA selector", "PULL")], [],
+  [#item("FPA", "CHECK ENGAGED")], [],
+  [#item("POSITION/FLT PATH", "MONITOR/ADJUST")], [],
+  combinedcell([
+      #item("GO-AROUND ALTITUDE", [SET #super[@approachFpa1]])
+  ], center),
+  [], [#item("FLIGHT PARAMETERS", "MONITOR")],
+  combinedcell[#rounddot("At minimum +100 ft:", false)],
+  table.hline(stroke: none),
+  [], [#text(size: 8pt, item("ONE HUNDRED ABOVE", "MONITOR or ANNOUNCE"))],
+  combinedcell[#rounddot("At minimum:", false)],
+  table.hline(stroke: none),
+  [#item("CONTINUE or GO-AROUND", "ANNOUNCE")], [#item("MINIMUM", "MONITOR or ANNOUNCE")],
+)
+
+counter(figure).update(0)
+note("approachFpa1", "PF if AP is ON, PM if AP is OFF. The PF may request that this action is performed by the PM depending on the situation.")
+
 subsection.step()
 
 context[#metadata("End of section Tasksharing") #sectionEndLabel]
