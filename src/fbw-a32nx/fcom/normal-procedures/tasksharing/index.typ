@@ -738,7 +738,8 @@ tasksharingtable(
   [#item("BOTH AP", "ENGAGE")], [],
   [#item("LOC", "CHECK ARMED")], [],
   [#item("G/S", "CHECK ARMED")], [],
-  [#item("LOC CAPTURE", "MONITOR")], [#item("G/S CAPTURE", "MONITOR")],
+  [#item("LOC CAPTURE", "MONITOR")], [],
+  [#item("G/S CAPTURE", "MONITOR")], [],
   combinedcell([
       #item("GO-AROUND ALTITUDE", [SET #super[@locGs1]])
   ], center),
