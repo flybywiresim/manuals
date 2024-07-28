@@ -11,6 +11,7 @@
 #import "./../templates/L2.typ": *
 #import "./../templates/L3.typ": *
 #import "./../templates/italic.typ": *
+#import "./../templates/bold.typ": *
 #import "./../templates/textred.typ": *
 #import "./../templates/textamber.typ": *
 #import "./../templates/textgreen.typ": *

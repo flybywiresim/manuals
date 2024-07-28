@@ -717,7 +717,71 @@ tasksharingtable(
   [], [#item("CABIN CREW", "ADVISE")],
   [], [#item("FLIGHT PARAMETERS", "MONITOR")],
 )
+
+counter(figure).update(0)
 note("apprConf1", "PF if AP is ON, PM if AP is OFF. The PF may request that this action is performed by the PM depending on the situation.")
+
+tasksharingtable(
+  "APPROACH USING LOC G/S GUIDANCE", true,
+  "PF", "PM",
+  combinedcell[
+    #underline("DESCENT PREPARATION:")
+  ],
+  [#item("APPROACH MINIMUM", "DETERMINE")], [],
+  combinedcell([
+      #item("ARRIVAL BRIEFING", "PERFORM")
+  ], center),
+  combinedcell[
+    #underline("INITIAL APPROACH:")
+  ],
+  [#item("APPR pb on FCU", "PRESS")], [],
+  [#item("BOTH AP", "ENGAGE")], [],
+  [#item("LOC", "CHECK ARMED")], [],
+  [#item("G/S", "CHECK ARMED")], [],
+  [#item("LOC CAPTURE", "MONITOR")], [#item("G/S CAPTURE", "MONITOR")],
+  combinedcell([
+      #item("GO-AROUND ALTITUDE", [SET #super[@locGs1]])
+  ], center),
+  combinedcell[
+    #underline("FINAL APPROACH:")
+  ],
+  [], [#item("FLIGHT PARAMETERS", "MONITOR")],
+  combinedcell[
+    #rounddot("At 350 ft:", false)
+  ],
+  table.hline(stroke: none),
+  [#item("LAND mode", "CHECK ENGAGED/ANNOUNCE")], [],
+  combinedcell[
+    #bold("For CAT I, CAT II and CAT III with DH approach:")
+    #linebreak()
+    #indent(
+      rounddot("At minimum +100 ft:", false)
+    )
+  ],
+  table.hline(stroke: none),
+  [], [#text(size: 8pt, item("ONE HUNDRED ABOVE", "MONITOR or ANNOUNCE"))],
+  combinedcell[
+    #indent(
+      rounddot("At minimum:", false)
+    )
+  ],
+  table.hline(stroke: none),
+  [#indent(item("CONTINUE or GO-AROUND", "ANNOUNCE"))], [#item("MINIMUM", "MONITOR or ANNOUNCE")],
+  combinedcell[
+    #bold("For CAT III with no DH approach:")
+    #linebreak()
+    #indent([
+      #rounddot("At 100 ft RA:", false)
+      #linebreak()
+      #text("If no failure detected")
+  ])
+  ],
+  table.hline(stroke: none),
+  [#indent(item("CONTINUE", "ANNOUNCE"))], [],
+)
+
+counter(figure).update(0)
+note("locGs1", "PF if AP is ON, PM if AP is OFF. The PF may request that this action is performed by the PM depending on the situation.")
 
 subsection.step()
 
