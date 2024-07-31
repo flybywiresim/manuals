@@ -836,6 +836,51 @@ note("approachFpa1", "PF if AP is ON, PM if AP is OFF. The PF may request that t
 
 subsection.step()
 
+tasksharingtable(
+  "MANUAL LANDING", true,
+  "PF", "PM",
+  [#item("AP", "OFF")], [],
+  combinedcell[#rounddot("Around 30 ft RA", false)],
+  table.hline(stroke: none),
+  [#item("FLARE", "PERFORM")], [#item("ATTITUDE", "MONITOR")],
+  table.hline(stroke: none),
+  [#item("THRUST LEVERS", "IDLE")], [],
+  combinedcell[#rounddot("At touchdown", false)],
+  table.hline(stroke: none),
+  [#item("DEROTATION", "INITIATE")], [],
+  table.hline(stroke: none),
+  [#item("ALL REVERSER LEVERS", "REV MAX or REV IDLE")], [#item("GND SPLRS", "CHECK/ANNOUNCE")],
+  table.hline(stroke: none),
+  [], [#item("REVERSERS", "CHECK/ANNOUNCE")],
+  table.hline(stroke: none),
+  [#item("DIRECTIONAL CONTROL", "ENSURE")], [],
+  table.hline(stroke: none),
+  combinedcell[#rounddot("If autobrake is selected", false)],
+  table.hline(stroke: none),
+  [], [#item("AUTO BRK", "CHECK/ANNOUNCE")],
+  table.hline(stroke: none),
+  [], [#item("AUTO BRK", "MONITOR")],
+  table.hline(stroke: none),
+  combinedcell[#rounddot("If landing without autobrake", false)],
+  table.hline(stroke: none),
+  [#item("BRAKES", "AS RQRD")], [],
+  table.hline(stroke: none),
+  [], [#item("DECELERATION", "CHECK/ANNOUNCE")],
+  combinedcell[#rounddot("At 70 kt", false)],
+  table.hline(stroke: none),
+  [], [#item("SEVENTY KNOTS", "ANNOUNCE")],
+  table.hline(stroke: none),
+  [#item("ALL REVERSER LEVERS", "IDLE")], [],
+  combinedcell[#rounddot("At taxi speed", false)],
+  table.hline(stroke: none),
+  [#item("ALL REVERSER LEVERS", "STOW")], [],
+  combinedcell[#rounddot("Before 20 kt", false)],
+  table.hline(stroke: none),
+  [#item("AUTO BRK", "DISARM")], [],
+)
+
+subsection.step()
+
 context[#metadata("End of section Tasksharing") #sectionEndLabel]
 }
 
