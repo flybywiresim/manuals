@@ -836,8 +836,11 @@ note("approachFpa1", "PF if AP is ON, PM if AP is OFF. The PF may request that t
 
 subsection.step()
 
+
+sectionheadingbox[MANUAL LANDING]
+
 tasksharingtable(
-  "MANUAL LANDING", true,
+  "", false,
   "PF", "PM",
   [#item("AP", "OFF")], [],
   combinedcell[#rounddot("Around 30 ft RA:", false)],
@@ -881,8 +884,10 @@ tasksharingtable(
 
 subsection.step()
 
+sectionheadingbox[AUTOMATIC LANDING]
+
 tasksharingtable(
-  "AUTOMATIC LANDING", true,
+  "", false,
   "PF", "PM",
   combinedcell[#rounddot("At 350 ft RA:", false)],
   table.hline(stroke: none),
@@ -935,6 +940,46 @@ tasksharingtable(
   table.hline(stroke: none),
   [#item("ALL REVERSER LEVERS", "STOW")], [],
   [#item("AP", "OFF")], [],
+)
+
+subsection.step()
+
+sectionheadingbox[GO AROUND (WITH FD ON)]
+
+tasksharingtable(
+  "", false,
+  "PF", "PM",
+  combinedcell(rounddot("Simultaneously apply the following three actions:", false)),
+  table.hline(stroke: none),
+  [#item("THRUST LEVERS", "TOGA THEN FLEX/MCT")], [],
+  table.hline(stroke: none),
+  [#item("ROTATION", "PERFORM")], [#item("FLIGHT PARAMETERS", "MONITOR")],
+  table.hline(stroke: none),
+  [#item("GO-AROUND", "ANNOUNCE")], [#item("FLAPS", "RETRACT ONE STEP")],
+  [#item("FMA", "CHECK/ANNOUNCE")], [],
+  [], [#item("POSITIVE CLIMB", "ANNOUNCE")],
+  [#item("L/G UP", "ORDER")], [#item("L/G", "UP")],
+  [#item("NAV or HDG", "AS RQRD")], [#item("GO AROUND ALTITUDE", "CHECK")],
+  combinedcell(rounddot("At go-around thrust reduction altitude:", false)),
+  table.hline(stroke: none),
+  [#item("THRUST LEVERS", "CL")], [],
+  combinedcell(rounddot("At go-around acceleration altitude:", false)),
+  table.hline(stroke: none),
+  [#item("SPEED TARGET", "MONITOR")], [],
+  table.hline(stroke: none),
+  [#rounddot("AT F SPEED:", false)], [],
+  table.hline(stroke: none),
+  [#item("FLAPS 1", "ORDER")], [#item("FLAPS 1", "SELECT")],
+  table.hline(stroke: none),
+  [#rounddot("AT S SPEED:", false)], [],
+  table.hline(stroke: none),
+  [#item("FLAPS 0", "ORDER")], [#item("FLAPS 0", "SELECT")],
+  table.hline(stroke: none),
+  [], [#item("GND SPLRS", "DISARM")],
+  table.hline(stroke: none),
+  [], [#item("L/G", "CHECK UP")],
+  table.hline(stroke: none),
+  [], [#item("EXTERIOR LIGHTS", "SET")]
 )
 
 subsection.step()
