@@ -1037,6 +1037,27 @@ tasksharingtable(
 
 subsection.step()
 
+sectionheadingbox[SECURING THE AIRCRAFT]
+
+tasksharingtable(
+  "", false,
+  "PF", "PM",
+  [#item("PARK BRK handle", "ON")], [#item("OXGEN CREW SUPPLY pb-sw", "OFF")],
+  [], [#item("EXTERIOR LIGHTS", "OFF")],
+  [#item("ALL IR MODE selectors", "OFF")], [#item("APU BLEED pb-sw", "OFF")],
+  [], [#item("EXT PWR pb", "AS RQRD")],
+  [], [#item("APU MASTER SW pb-sw", "OFF")],
+  [], [#item("EMER EXIT LT sw", "OFF")],
+  [], [#item("SIGNS sw", "OFF")],
+  [], [#item("BAT 1 pb-sw + BAT 2 pb-sw", "OFF")],
+  [#item("SECURING THE AIRCRAFT C/L", "COMPLETE")], [#item("SECURING THE AIRCRAFT C/L", "COMPLETE")],
+  combinedcell([#item("EFB applications", "CLOSE")], center),
+  combinedcell([#item("All EFB", "SWITCH OFF")], center),
+  [], [#item("MAINT BUS sw", "AS RQRD")],
+)
+
+subsection.step()
+
 context[#metadata("End of section Tasksharing") #sectionEndLabel]
 }
 
