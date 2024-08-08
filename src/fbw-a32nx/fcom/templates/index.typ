@@ -19,3 +19,4 @@
 #import "./../templates/combinedcell.typ": *
 #import "./../templates/optiontriangle.typ": *
 #import "./../templates/note.typ": *
+#import "./../templates/section.typ": *

@@ -25,21 +25,33 @@ grid(
     let endSubSection = counter("subsection").at(locate(here())).at(0)
     let sectionHeadingBoxesOnPage = query(selector(<sectionheadingbox>).before(here())).len() - query(selector(<sectionheadingbox>).before(locate(query(selector(<pageheader>).before(here())).last().location()))).len()
 
-    if startSubSection == 0 {
-      if sectionHeadingBoxesOnPage <= 1 {
-        numbering("A", startSubSection+1)
-      } else if endSubSection - startSubSection - sectionHeadingBoxesOnPage == 0 {
-        numbering("A", startSubSection+1) +  " to " + numbering("A", endSubSection)
-      } else {
-        numbering("A", startSubSection+1) +  " to " + numbering("A", endSubSection+1)
+    if calc.even(startSubSection) and calc.even(endSubSection) {
+      if (endSubSection - startSubSection == 2) {
+        numbering("A", int(startSubSection/2)+1)
+      }
+      else {
+        numbering("A", int(startSubSection/2)+1) +  " to " + numbering("A", int((endSubSection)/2))
+      }
+    } else if calc.even(startSubSection) {
+      if (endSubSection - startSubSection == 1) {
+        numbering("A", int(startSubSection/2)+1)
+      }
+      else {
+        numbering("A", int(startSubSection/2)+1) +  " to " + numbering("A", int((endSubSection - 1)/2)+1) + [\u{2192}]
+      }
+    } else if calc.even(endSubSection) {
+      if (endSubSection - startSubSection == 1) {
+        numbering("A", int(startSubSection/2)+1)
+      }
+      else {
+        [\u{2190}] + numbering("A", int(startSubSection/2)+1) +  " to " + numbering("A", int((endSubSection)/2))
       }
     } else {
-      if endSubSection - startSubSection <= 1 {
-        numbering("A", startSubSection+1)
-      } else if endSubSection - startSubSection - sectionHeadingBoxesOnPage > 0 {
-        numbering("A", startSubSection+1) +  " to " + numbering("A", endSubSection)
-      } else {
-        numbering("A", startSubSection+1) +  " to " + numbering("A", endSubSection+1)
+      if (endSubSection - startSubSection == 0) {
+        [\u{2190}] + numbering("A", int(startSubSection/2)+1) + [\u{2192}]
+      }
+      else {
+        [\u{2190}] + numbering("A", int(startSubSection/2)+1) +  " to " + numbering("A", int((endSubSection)/2)+1) + [\u{2192}]
       }
     }
   }
