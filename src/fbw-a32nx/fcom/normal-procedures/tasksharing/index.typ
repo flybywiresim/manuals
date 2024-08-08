@@ -382,7 +382,7 @@ tasksharingtable(
     #item("DEPARTURE BRIEFING", "CONFIRM")], center
   ),
   [], [#item("AUTO BRK MAX pb-sw", "ON")],
-  [#item("TERR ON ND " + optiontriangle(), "AS RQRD")], [#item("TERR ON ND " + optiontriangle() + " ", "AS RQRD")],
+  [#item("TERR ON ND " + optiontriangle() + " ", "AS RQRD")], [#item("TERR ON ND " + optiontriangle() + " ", "AS RQRD")],
   [], [#text(size: 8pt, item("ATC CODE/MODE", "CONFIRM/SET FOR TAKEOFF"))],
   [], [#item("ENG MODE selector", "AS RQRD")],
   [], [#item("WEATHER RADAR", "ON")],
@@ -980,6 +980,28 @@ tasksharingtable(
   [], [#item("L/G", "CHECK UP")],
   table.hline(stroke: none),
   [], [#item("EXTERIOR LIGHTS", "SET")]
+)
+
+subsection.step()
+
+sectionheadingbox[AFTER LANDING]
+
+tasksharingtable(
+  "", false,
+  "PF", "PM",
+  [#item("GND SPLRS", "DISARM")], [],
+  [#item("EXTERIOR LIGHTS", "SET")], [],
+  [], [#item("RADAR", "OFF")],
+  [], [#item("PREDICTIVE WINDSHEAR " + optiontriangle() + " ", "OFF")],
+  [], [#item("ENG MODE selecor", "NORM")],
+  [], [#item("FLAPS", "RETRACT")],
+  [], [#item("TCAS", "STBY")],
+  [], [#item("ATC", "AS RQRD")],
+  [], [#item("APU", "START")],
+  [], [#item("ANTI ICE", "AS RQRD")],
+  [], [#item("BRAKE TEMPERATURE", "MONITOR")],
+  [], [#item("BRK FAN pb " + optiontriangle() + " ", "AS RQRD")],
+  [#item("AFTER LANDING C/L", "COMPLETE")], [#item("AFTER LANDING C/L", "COMPLETE")],
 )
 
 subsection.step()
