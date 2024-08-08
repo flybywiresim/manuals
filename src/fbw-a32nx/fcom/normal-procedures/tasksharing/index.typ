@@ -1006,6 +1006,37 @@ tasksharingtable(
 
 subsection.step()
 
+sectionheadingbox[PARKING]
+
+tasksharingtable(
+  "", false,
+  "PF", "PM",
+  [#item("ACCU PRESS", "CHECK")], [#item("ANTI ICE", "OFF")],
+  [#item("PARK BRK handle", "ON")], [#item("APU BLEED pb-sw", "ON")],
+  [#item("BRAKES PRESS indicator", "CHECK")], [],
+  [#item("ALL ENG MASTER LEVERS", "OFF")], [],
+  [#item("WING sw", "OFF")], [],
+  [#item("BEACON sw", "OFF")], [],
+  [#item("OTHER EXTERIOR LIGHTS", "AS RQRD")], [#item("FUEL PUMPS/CTR XFR VALVES", "OFF")],
+  [#item("SLIDES", "CHECK DISARMED")], [],
+  [#item("SEAT BELTS sw", "OFF")], [],
+  [#item("GROUND CONTACT", "ESTABLISH")], [],
+  [#item("PARK BRK handle", "AS RQRD")], [#item("BRAKE FAN pb " + optiontriangle() + " ", "AS RQRD")],
+  [#item("PARKING C/L", "COMPLETE")], [#item("PARKING C/L", "COMPLETE")],
+  [#item("HUD " + optiontriangle() + " ", "STOW")], [#item("HUD " + optiontriangle() + " ", "STOW")],
+  [], [#item("ATC", "STBY")],
+  [], [#item("IRS PERFORMANCE", "CHECK")],
+  [], [#item("FUEL QUANTITY", "CHECK")],
+  [#item("DUs", "DIM")], [#item("DUs", "DIM")],
+  combinedcell([#item("LOGBOOK", "COMPLETE (CM1)")], center),
+  [#item("All EFB TRANSMITTING MODDE", "AS RQRD")], [#item("All EFB TRANSMITTING MODDE", "AS RQRD")],
+  [#rounddot("If performing transit stop:", false)], [#rounddot("If performing transit stop:", false)],
+  table.hline(stroke: none),
+  [#item("CLEAR/CLOSE FLIGHT", "APPLY")], [#item("CLEAR/CLOSE FLIGHT", "APPLY")],
+)
+
+subsection.step()
+
 context[#metadata("End of section Tasksharing") #sectionEndLabel]
 }
 
