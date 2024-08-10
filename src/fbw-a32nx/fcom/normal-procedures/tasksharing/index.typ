@@ -14,7 +14,7 @@
 
 set text(
   font: "Familjen Grotesk",
-  size: 9pt,
+  size: 8pt,
   hyphenate: false,
 )
 set page(
@@ -180,7 +180,7 @@ section(subsection, [
     "PF", "PM",
     [], [#text(size: 7.5pt, item("* ECAM OXY PRESS/HYD QTY/ENG OIL QTY", "CHECK"))],
     [], [#item("FLAPS", "CHECK POSITION")],
-    [], [#text(size: 8pt, item("* SPEED BRAKE lever", "CHECK RET AND DISARMED"))],
+    [], [#item("* SPEED BRAKE lever", "CHECK RET AND DISARMED")],
     [], [#item("* ACCU PRESS", "CHECK")],
     [], [#item("* PARK BRK handle", "ON")],
     [], [#item("* BRAKES PRESS indicator", "CHECK")],
@@ -200,7 +200,7 @@ section(subsection, [
     "OVERHEAD PANEL:", false,
     "PF", "PM",
     [
-      #text(size: 8pt, "As a general rule, during the scan sequence:")
+      #text("As a general rule, during the scan sequence:")
       #linebreak()
       #text(size: 7.5pt, item("* All white lights (except MAINTENANCE panel)", "OFF"))], [],
     [#item("* RCDR GND CTL pb-sw", "ON")], [],
@@ -364,7 +364,7 @@ section(subsection, [
     table.hline(stroke: none),
     [#item("APU MASTER SW pb-sw", "OFF")], [],
     [#item("ECAM STATUS", "CHECK")], [#item("ECAM STATUS", "CHECK")],
-    [#text(size: 8.5pt, item(textamber("NW STRG DISC ") + "MEMO", "CHECK NOT DISPLAYED"))], [],
+    [#item(textamber("NW STRG DISC ") + "MEMO", "CHECK NOT DISPLAYED")], [],
     [#item("CLEAR TO DISCONNECT", "ANNOUNCE")], [],
     [#item("AFTER START C/L", "COMPLETE")], [#item("AFTER START C/L", "COMPLETE")],
   )
@@ -391,7 +391,7 @@ section(subsection, [
     ),
     [], [#item("AUTO BRK MAX pb-sw", "ON")],
     [#item("TERR ON ND " + optiontriangle() + " ", "AS RQRD")], [#item("TERR ON ND " + optiontriangle() + " ", "AS RQRD")],
-    [], [#text(size: 8pt, item("ATC CODE/MODE", "CONFIRM/SET FOR TAKEOFF"))],
+    [], [#item("ATC CODE/MODE", "CONFIRM/SET FOR TAKEOFF")],
     [], [#item("ENG MODE selector", "AS RQRD")],
     [], [#item("WEATHER RADAR", "ON")],
     [], [#item("PREDICTIVE WINDSHEAR SYSTEM " + optiontriangle() + " ", "ON")],
@@ -559,7 +559,7 @@ section(subsection, [
       #rounddot("At transition altitude", false)
     ],
     table.hline(stroke: none),
-    [#text(size: 8pt, item("BAROMETRIC REFERENCE", "SET STD/CROSSCHECK"))], [#text(size: 8pt, item("BAROMETRIC REFERENCE", "SET STD/CROSSCHECK"))],
+    [#item("BAROMETRIC REFERENCE", "SET STD/CROSSCHECK")], [#item("BAROMETRIC REFERENCE", "SET STD/CROSSCHECK")],
     [#item("WEATHER RADAR", "ADJUST AS APPROPRIATE")], [#item("ENG ANTI ICE pb-sw", "AS RQRD")],
     combinedcell[
       #rounddot("At 10 000 ft AAL", false)
@@ -601,7 +601,7 @@ section(subsection, [
   #tasksharingtable(
     "", false,
     "PF", "PM",
-    [], [#text(size: 8pt, item("WEATHER AND LANDING INFORMATION", "OBTAIN"))],
+    [], [#item("WEATHER AND LANDING INFORMATION", "OBTAIN")],
     combinedcell([
       #item("NAV CHARTS CLIPBOARD", "PREPARE")
     ], center),
@@ -643,7 +643,7 @@ section(subsection, [
       #rounddot("When the aircraft approaches the transition level, and when cleared for an altitude:", false)
     ],
     table.hline(stroke: none),
-    [#text(size: 8.5pt, item("BAROMETRIC REFERENCE", "SET/CROSSCHECK"))], [#text(size: 8.5pt, item("BAROMETRIC REFERENCE", "SET/CROSSCHECK"))],
+    [#item("BAROMETRIC REFERENCE", "SET/CROSSCHECK")], [#item("BAROMETRIC REFERENCE", "SET/CROSSCHECK")],
     combinedcell[
       #rounddot("At 10 000 ft AAL:", false)
     ],
@@ -779,7 +779,7 @@ section(subsection, [
       )
     ],
     table.hline(stroke: none),
-    [], [#text(size: 8pt, item("ONE HUNDRED ABOVE", "MONITOR or ANNOUNCE"))],
+    [], [#item("ONE HUNDRED ABOVE", "MONITOR or ANNOUNCE")],
     combinedcell[
       #indent(
         rounddot("At minimum:", false)
@@ -822,7 +822,7 @@ section(subsection, [
     combinedcell[
       #underline("INITIAL/INTERMEDIATE/FINAL APPROACH:")
     ],
-    [#text(size: 8pt, item("LATERAL GUIDANCE MODE", "SET FOR APPROACH"))], [],
+    [#item("LATERAL GUIDANCE MODE", "SET FOR APPROACH")], [],
     combinedcell[#rounddot("For LOC ONLY and ILS G/S OUT:", false)],
     table.hline(stroke: none),
     [#indent(item("LOC pb-sw", "PRESS"))],[],
@@ -844,7 +844,7 @@ section(subsection, [
     [], [#item("FLIGHT PARAMETERS", "MONITOR")],
     combinedcell[#rounddot("At minimum +100 ft:", false)],
     table.hline(stroke: none),
-    [], [#text(size: 8pt, item("ONE HUNDRED ABOVE", "MONITOR or ANNOUNCE"))],
+    [], [#item("ONE HUNDRED ABOVE", "MONITOR or ANNOUNCE")],
     combinedcell[#rounddot("At minimum:", false)],
     table.hline(stroke: none),
     [#item("CONTINUE or GO-AROUND", "ANNOUNCE")], [#item("MINIMUM", "MONITOR or ANNOUNCE")],
