@@ -593,8 +593,6 @@ section(subsection, [
   )
 ])
 
-pagebreak()
-
 section(subsection, [
   #sectionheadingbox[DESCENT PREPARATION]
 
@@ -628,6 +626,8 @@ section(subsection, [
     [#item("CLEARED ALTITUDE ON FCU", "SET")], [],
   )
 ])
+
+pagebreak()
 
 section(subsection, [
   #sectionheadingbox[DESCENT]
@@ -960,6 +960,8 @@ section(subsection, [
     [#item("AP", "OFF")], [],
   )
 ])
+
+pagebreak()
 
 section(subsection, [
   #sectionheadingbox[GO AROUND (WITH FD ON)]
