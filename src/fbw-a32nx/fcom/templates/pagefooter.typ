@@ -34,14 +34,14 @@ grid(
       }
     } else if calc.even(startSubSection) {
       if (endSubSection - startSubSection == 1) {
-        numbering("A", int(startSubSection/2)+1)
+        numbering("A", int(startSubSection/2)+1) + [\u{2192}]
       }
       else {
         numbering("A", int(startSubSection/2)+1) +  " to " + numbering("A", int((endSubSection - 1)/2)+1) + [\u{2192}]
       }
     } else if calc.even(endSubSection) {
       if (endSubSection - startSubSection == 1) {
-        numbering("A", int(startSubSection/2)+1)
+        [\u{2190}] + numbering("A", int(startSubSection/2)+1)
       }
       else {
         [\u{2190}] + numbering("A", int(startSubSection/2)+1) +  " to " + numbering("A", int((endSubSection)/2))
